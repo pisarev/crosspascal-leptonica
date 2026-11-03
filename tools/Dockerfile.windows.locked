@@ -1,0 +1,291 @@
+# PREPARATION DRAFT / BLOCKED, not BUILD_READY. Stage14 never built this DLL.
+# Build must use: docker build --platform linux/amd64 --pull=false --no-cache --network=none
+# Required context: env/apt-offline (complete local jammy repo + exact selections),
+# env/apt-offline.sha256, vendor/* pinned complete clean Git directories, and bridge files.
+# =============================================================================
+# Leptonica Fat Build - Windows (MinGW cross-compile)
+#
+# Builds leptonica-1.87.0.dll using MinGW cross-compiler on Linux.
+# Includes:
+#   - All Leptonica 1.87.0 public API functions
+#   - Image codecs statically linked (JPEG, PNG, TIFF, WebP, GIF, JPEG2000)
+#
+# Usage:
+#   docker build -f Dockerfile.windows -t leptonica-fat-windows .
+#   docker run --rm -v $(pwd)/output:/output-host leptonica-fat-windows
+#
+# Result: ./output/leptonica-1.87.0.dll
+# =============================================================================
+
+FROM sha256:5c0737d0033450cc78360bdc6024499ae984431a4bb47967d16c15c2fbc4e086 AS builder
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LEPTONICA_VERSION=1.87.0
+
+# THE libjpeg-turbo VERSION IS AN ARGUMENT, not wired into the clone command.
+# Reason: on 28.08.2026 it was measured that a build with 3.0.4 cannot safely
+# REFUSE a corrupted JPEG - a truncated real JPEG kills the process 17 times
+# out of 40, an intact one always reads, a corrupted PNG refuses cleanly. So
+# that versions can be tried by changing one argument rather than editing the
+# recipe for every attempt.
+ARG LIBJPEG_VERSION=3.0.4
+
+# EXTRA COMPILER ARGUMENTS FOR Leptonica ITSELF, also a recipe argument.
+# Same reason. JPEG parsing in Leptonica is built on setjmp/longjmp: both the
+# jmp_buf and the setjmp call live in its jpegio.c, and longjmp invokes
+# libjpeg's error handler. On mingw-w64 for x86_64 with __SEH__, setjmp expands
+# into the TWO-ARGUMENT _setjmp carrying a frame address, and then longjmp
+# performs an SEH UNWIND over that frame. The argument
+# -DUSE_NO_MINGW_SETJMP_TWO_ARGS selects the one-argument _setjmp from msvcrt:
+# there is no frame, so no unwinding happens. Verified against the toolchain's
+# own setjmp.h, the branches at lines 212-265, and not from memory.
+ARG LEPT_C_FLAGS=
+
+# BUILDING libjpeg-turbo WITH OR WITHOUT SIMD.
+# Reason: refusing a corrupted JPEG goes through longjmp, and on x86_64 longjmp
+# UNWINDS the stack using SEH data. Unwinding requires that EVERY frame on the
+# way carries unwind data. In libjpeg-turbo the fast paths are written in
+# assembly (NASM), and if they lack that data the unwind walks into memory that
+# is not its own. This explains both the randomness - which frame ends up on
+# the way depends on the data - and the fact that an intact JPEG always reads:
+# there longjmp is never called at all.
+ARG LIBJPEG_SIMD=ON
+
+# BLOCKED: full apt snapshot closure, exact versions and SHA-256 of every .deb
+# must be supplied as env/apt-offline and env/apt-offline.sha256 first.
+# All packages are served from an immutable LOCAL repository, even with --network=none.
+COPY env/apt-offline/ /opt/apt-offline/
+COPY env/apt-offline.sha256 /opt/locks/apt-offline.sha256
+RUN set -eu; cd /opt/apt-offline; sed -e '1d' -e 's/\r$//' -e 's# env/apt-offline/# #' /opt/locks/apt-offline.sha256 | sha256sum -c -; \
+    test -s /opt/apt-offline/package-selections.txt; \
+    test $(wc -w < /opt/apt-offline/package-selections.txt) -ge 1; \
+    rm -f /etc/apt/sources.list.d/*.sources /etc/apt/sources.list.d/*.list; \
+    printf 'deb [trusted=yes] file:/opt/apt-offline ./\n' > /etc/apt/sources.list; \
+    apt-get -o Acquire::Retries=0 update; \
+    xargs -a /opt/apt-offline/package-selections.txt apt-get -o Acquire::Retries=0 install -y --no-install-recommends
+
+# Use posix threading model
+RUN update-alternatives --set x86_64-w64-mingw32-gcc /usr/bin/x86_64-w64-mingw32-gcc-posix 2>/dev/null || true \
+    && update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix 2>/dev/null || true
+
+WORKDIR /build
+COPY source_identity.py /build/source_identity.py
+COPY source-manifest.json /build/source-manifest.json
+
+COPY mingw-toolchain.cmake /build/mingw-toolchain.cmake
+
+# =================================================================
+# Stage 1: Build zlib (static, cross-compiled)
+# =================================================================
+ADD vendor/zlib.tar /build/zlib-src/
+RUN python3 /build/source_identity.py --manifest /build/source-manifest.json --component zlib --root /build/zlib-src \
+    && mkdir -p /build/zlib-build && cd /build/zlib-build \
+    && cmake -G Ninja /build/zlib-src \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/zlib-win \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DBUILD_SHARED_LIBS=OFF \
+    && ninja && ninja install \
+    && echo "=== zlib ===" && find /opt/zlib-win -name "*.a" -ls
+
+# =================================================================
+# Stage 2: Build libpng (static, cross-compiled)
+# =================================================================
+ADD vendor/libpng.tar /build/libpng-src/
+RUN python3 /build/source_identity.py --manifest /build/source-manifest.json --component libpng --root /build/libpng-src \
+    && mkdir -p /build/libpng-build && cd /build/libpng-build \
+    && cmake -G Ninja /build/libpng-src \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/libpng-win \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DBUILD_SHARED_LIBS=OFF \
+        -DPNG_TESTS=OFF \
+        -DPNG_SHARED=OFF \
+        -DPNG_STATIC=ON \
+        -DZLIB_INCLUDE_DIR=/opt/zlib-win/include \
+        -DZLIB_LIBRARY=/opt/zlib-win/lib/libzlibstatic.a \
+    && ninja && ninja install \
+    && echo "=== libpng ===" && find /opt/libpng-win -name "*.a" -ls
+
+# =================================================================
+# Stage 3: Build libjpeg-turbo (static, cross-compiled)
+# =================================================================
+ADD vendor/libjpeg-turbo.tar /build/libjpeg-src/
+RUN python3 /build/source_identity.py --manifest /build/source-manifest.json --component libjpeg-turbo --root /build/libjpeg-src \
+    && mkdir -p /build/libjpeg-build && cd /build/libjpeg-build \
+    && cmake -G Ninja /build/libjpeg-src \
+        -DWITH_SIMD=${LIBJPEG_SIMD} \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/libjpeg-win \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DENABLE_SHARED=OFF \
+        -DENABLE_STATIC=ON \
+    && ninja && ninja install \
+    && echo "=== libjpeg ===" && find /opt/libjpeg-win -name "*.a" -ls
+
+# =================================================================
+# Stage 4: Build libtiff (static, cross-compiled)
+# =================================================================
+ADD vendor/libtiff.tar /build/libtiff-src/
+RUN python3 /build/source_identity.py --manifest /build/source-manifest.json --component libtiff --root /build/libtiff-src \
+    && mkdir -p /build/libtiff-build && cd /build/libtiff-build \
+    && cmake -G Ninja /build/libtiff-src \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/libtiff-win \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DBUILD_SHARED_LIBS=OFF \
+        -Dtiff-tools=OFF \
+        -Dtiff-tests=OFF \
+        -Dtiff-contrib=OFF \
+        -Dtiff-docs=OFF \
+        -DZLIB_INCLUDE_DIR=/opt/zlib-win/include \
+        -DZLIB_LIBRARY=/opt/zlib-win/lib/libzlibstatic.a \
+        -DJPEG_INCLUDE_DIR=/opt/libjpeg-win/include \
+        -DJPEG_LIBRARY=/opt/libjpeg-win/lib/libjpeg.a \
+    && ninja && ninja install \
+    && echo "=== libtiff ===" && find /opt/libtiff-win -name "*.a" -ls
+
+# =================================================================
+# Stage 5: Build libwebp (static, cross-compiled)
+# =================================================================
+ADD vendor/libwebp.tar /build/libwebp-src/
+RUN python3 /build/source_identity.py --manifest /build/source-manifest.json --component libwebp --root /build/libwebp-src \
+    && mkdir -p /build/libwebp-build && cd /build/libwebp-build \
+    && cmake -G Ninja /build/libwebp-src \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/libwebp-win \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DBUILD_SHARED_LIBS=OFF \
+        -DWEBP_BUILD_ANIM_UTILS=OFF \
+        -DWEBP_BUILD_CWEBP=OFF \
+        -DWEBP_BUILD_DWEBP=OFF \
+        -DWEBP_BUILD_GIF2WEBP=OFF \
+        -DWEBP_BUILD_IMG2WEBP=OFF \
+        -DWEBP_BUILD_VWEBP=OFF \
+        -DWEBP_BUILD_WEBPINFO=OFF \
+        -DWEBP_BUILD_WEBPMUX=OFF \
+        -DWEBP_BUILD_EXTRAS=OFF \
+    && ninja && ninja install \
+    && echo "=== libwebp ===" && find /opt/libwebp-win -name "*.a" -ls
+
+# =================================================================
+# Stage 6: Build giflib (static, cross-compiled)
+# =================================================================
+COPY vendor/giflib-5.2.2.tar.gz /build/giflib-5.2.2.tar.gz
+RUN echo 'be7ffbd057cadebe2aa144542fd90c6838c6a083b5e8a9048b8ee3b66b29d5fb  /build/giflib-5.2.2.tar.gz' | sha256sum -c - \
+    && tar xzf giflib-5.2.2.tar.gz && mv giflib-5.2.2 /build/giflib-src \
+    && cd /build/giflib-src \
+    && x86_64-w64-mingw32-gcc-posix -c -O2 -fPIC \
+        dgif_lib.c egif_lib.c gif_err.c gif_font.c gif_hash.c gifalloc.c openbsd-reallocarray.c \
+    && x86_64-w64-mingw32-ar rcs libgif.a *.o \
+    && mkdir -p /opt/giflib-win/lib /opt/giflib-win/include \
+    && cp libgif.a /opt/giflib-win/lib/ \
+    && cp gif_lib.h /opt/giflib-win/include/ \
+    && echo "=== giflib ===" && ls -lh /opt/giflib-win/lib/*.a
+
+# =================================================================
+# Stage 7: Build openjpeg (static, cross-compiled)
+# =================================================================
+ADD vendor/openjpeg.tar /build/openjpeg-src/
+RUN python3 /build/source_identity.py --manifest /build/source-manifest.json --component openjpeg --root /build/openjpeg-src \
+    && mkdir -p /build/openjpeg-build && cd /build/openjpeg-build \
+    && cmake -G Ninja /build/openjpeg-src \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/openjpeg-win \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DBUILD_SHARED_LIBS=OFF \
+        -DBUILD_CODEC=OFF \
+        -DBUILD_TESTING=OFF \
+    && ninja && ninja install \
+    && echo "=== openjpeg ===" && find /opt/openjpeg-win -name "*.a" -ls
+
+# =================================================================
+# Stage 8: Build Leptonica (static, cross-compiled)
+# =================================================================
+COPY owned_setjmp_compat.h /opt/owned008/owned_setjmp_compat.h
+COPY owned_codec_launcher.sh /opt/owned008/owned_codec_launcher.sh
+RUN chmod 0755 /opt/owned008/owned_codec_launcher.sh
+ADD vendor/leptonica.tar /build/leptonica-src/
+RUN python3 /build/source_identity.py --manifest /build/source-manifest.json --component leptonica --root /build/leptonica-src \
+    && mkdir -p /build/leptonica-build && cd /build/leptonica-build \
+    && cmake -G Ninja /build/leptonica-src \
+        -DCMAKE_C_FLAGS="${LEPT_C_FLAGS}" \
+        -DCMAKE_C_COMPILER_LAUNCHER=/opt/owned008/owned_codec_launcher.sh \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/leptonica-win \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DBUILD_SHARED_LIBS=OFF \
+        -DBUILD_PROG=OFF \
+        -DSW_BUILD=OFF \
+        -DZLIB_INCLUDE_DIR=/opt/zlib-win/include \
+        -DZLIB_LIBRARY=/opt/zlib-win/lib/libzlibstatic.a \
+        -DPNG_PNG_INCLUDE_DIR=/opt/libpng-win/include \
+        -DPNG_LIBRARY=/opt/libpng-win/lib/libpng16.a \
+        -DJPEG_INCLUDE_DIR=/opt/libjpeg-win/include \
+        -DJPEG_LIBRARY=/opt/libjpeg-win/lib/libjpeg.a \
+        -DTIFF_INCLUDE_DIR=/opt/libtiff-win/include \
+        -DTIFF_LIBRARY=/opt/libtiff-win/lib/libtiff.a \
+        -DWEBP_INCLUDE_DIR=/opt/libwebp-win/include \
+        -DWEBP_LIBRARY=/opt/libwebp-win/lib/libwebp.a \
+        -DGIF_INCLUDE_DIR=/opt/giflib-win/include \
+        -DGIF_LIBRARY=/opt/giflib-win/lib/libgif.a \
+        -DJPEG2000_INCLUDE_DIR=/opt/openjpeg-win/include/openjpeg-2.5 \
+        -DJP2K_INCLUDE_DIR=/opt/openjpeg-win/include/openjpeg-2.5 \
+        -DJPEG2000_LIBRARY=/opt/openjpeg-win/lib/libopenjp2.a \
+        -DJP2K_LIBRARY=/opt/openjpeg-win/lib/libopenjp2.a \
+    && ninja -j$(nproc) \
+    && ninja install \
+    && echo "=== Leptonica static lib ===" \
+    && find /opt/leptonica-win -name "*.a" -ls
+
+# Leptonica's CMake has a bug: sets SUFFIX to ".dll" even for static builds
+# The static archive is actually libleptonica-1.87.0.dll (ar format despite .dll ext)
+RUN ln -sf /opt/leptonica-win/lib/libleptonica-1.87.0.dll /opt/leptonica-win/lib/libleptonica.a
+
+# =================================================================
+# Stage 9: Build fat leptonica-1.87.0.dll (all deps bundled)
+# =================================================================
+COPY CMakeLists.txt /build/leptonica-fat/
+
+RUN mkdir -p /build/leptonica-fat-build && cd /build/leptonica-fat-build \
+    && cmake -G Ninja /build/leptonica-fat \
+        -DCMAKE_TOOLCHAIN_FILE=/build/mingw-toolchain.cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/leptonica-fat-win \
+        -DLeptonica_DIR=/opt/leptonica-win/lib/cmake/leptonica \
+        -DLEPT_STATIC_LIB=/opt/leptonica-win/lib/libleptonica.a \
+        -DZLIB_LIBRARY=/opt/zlib-win/lib/libzlibstatic.a \
+        -DZLIB_INCLUDE_DIR=/opt/zlib-win/include \
+        -DPNG_LIBRARY=/opt/libpng-win/lib/libpng16.a \
+        -DPNG_PNG_INCLUDE_DIR=/opt/libpng-win/include \
+        -DJPEG_LIBRARY=/opt/libjpeg-win/lib/libjpeg.a \
+        -DJPEG_INCLUDE_DIR=/opt/libjpeg-win/include \
+        -DTIFF_LIBRARY=/opt/libtiff-win/lib/libtiff.a \
+        -DTIFF_INCLUDE_DIR=/opt/libtiff-win/include \
+        -DGIF_LIBRARY=/opt/giflib-win/lib/libgif.a \
+        -DGIF_INCLUDE_DIR=/opt/giflib-win/include \
+        -DWEBP_LIB=/opt/libwebp-win/lib/libwebp.a \
+        -DOPENJP2_LIB=/opt/openjpeg-win/lib/libopenjp2.a \
+    && ninja -j$(nproc) \
+    && ninja install \
+    && x86_64-w64-mingw32-strip --strip-unneeded /opt/leptonica-fat-win/bin/leptonica-1.87.0.dll
+
+RUN echo "=== Files in install dir ===" \
+    && find /opt/leptonica-fat-win/ -type f -name "*.dll" -o -name "*.a" | head -20 \
+    && echo "=== DLL dependencies ===" \
+    && x86_64-w64-mingw32-objdump -p /opt/leptonica-fat-win/bin/leptonica-1.87.0.dll | grep "DLL Name" || true \
+    && echo "=== Exported symbols count ===" \
+    && x86_64-w64-mingw32-objdump -x /opt/leptonica-fat-win/bin/leptonica-1.87.0.dll 2>/dev/null | grep "\[Name Pointer/Ordinal\]" || true \
+    && echo "=== DLL size ===" \
+    && ls -lh /opt/leptonica-fat-win/bin/leptonica-1.87.0.dll
+
+FROM sha256:5c0737d0033450cc78360bdc6024499ae984431a4bb47967d16c15c2fbc4e086
+COPY --from=builder /opt/leptonica-fat-win/bin/leptonica-1.87.0.dll /output/leptonica-1.87.0.dll
+CMD ["cp", "/output/leptonica-1.87.0.dll", "/output-host/leptonica-1.87.0.dll"]

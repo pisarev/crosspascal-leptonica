@@ -1,0 +1,41 @@
+﻿{ Copyright (c) 2026 Yuriy Pisarev. MIT license; see LICENSE. }
+package crosspascal_crosslept;
+
+{$RUNONLY}
+{$DESCRIPTION 'Object Pascal bindings for leptonica'}
+
+requires
+  rtl;
+
+contains
+  Leptonica.Analysis in '..\..\pascal\Leptonica.Analysis.pas',
+  Leptonica.Binarize in '..\..\pascal\Leptonica.Binarize.pas',
+  Leptonica.Blend in '..\..\pascal\Leptonica.Blend.pas',
+  Leptonica.Box in '..\..\pascal\Leptonica.Box.pas',
+  Leptonica.Color in '..\..\pascal\Leptonica.Color.pas',
+  Leptonica.Colormap in '..\..\pascal\Leptonica.Colormap.pas',
+  Leptonica.Dewarp in '..\..\pascal\Leptonica.Dewarp.pas',
+  Leptonica.Dna in '..\..\pascal\Leptonica.Dna.pas',
+  Leptonica.Enhance in '..\..\pascal\Leptonica.Enhance.pas',
+  Leptonica.Filter in '..\..\pascal\Leptonica.Filter.pas',
+  Leptonica.FPix in '..\..\pascal\Leptonica.FPix.pas',
+  Leptonica.Graphics in '..\..\pascal\Leptonica.Graphics.pas',
+  Leptonica.IO in '..\..\pascal\Leptonica.IO.pas',
+  Leptonica.Jbig in '..\..\pascal\Leptonica.Jbig.pas',
+  Leptonica.Kernel in '..\..\pascal\Leptonica.Kernel.pas',
+  Leptonica.Morph in '..\..\pascal\Leptonica.Morph.pas',
+  Leptonica.Numa in '..\..\pascal\Leptonica.Numa.pas',
+  Leptonica.Pageseg in '..\..\pascal\Leptonica.Pageseg.pas',
+  Leptonica in '..\..\pascal\Leptonica.pas',
+  Leptonica.Pix in '..\..\pascal\Leptonica.Pix.pas',
+  Leptonica.Pixa in '..\..\pascal\Leptonica.Pixa.pas',
+  Leptonica.Pta in '..\..\pascal\Leptonica.Pta.pas',
+  Leptonica.Recog in '..\..\pascal\Leptonica.Recog.pas',
+  Leptonica.Rop in '..\..\pascal\Leptonica.Rop.pas',
+  Leptonica.Sarray in '..\..\pascal\Leptonica.Sarray.pas',
+  Leptonica.Sel in '..\..\pascal\Leptonica.Sel.pas',
+  Leptonica.Transform in '..\..\pascal\Leptonica.Transform.pas',
+  Leptonica.Watershed in '..\..\pascal\Leptonica.Watershed.pas',
+  LeptonicaTypes in '..\..\pascal\LeptonicaTypes.pas';
+
+end.
