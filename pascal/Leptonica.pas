@@ -1,4 +1,11 @@
-﻿{ Copyright (c) 2026 Yuriy Pisarev. MIT license; see LICENSE. }
+﻿{ ************************************************************************** }
+{                                                                            }
+{ Leptonica                                                                  }
+{                                                                            }
+{ Copyright © 2026 Yuriy Pisarev (ypisareff@outlook.com)                     }
+{                                                                            }
+{ ************************************************************************** }
+
 unit Leptonica;
 
 {$IFDEF FPC}
@@ -305,6 +312,7 @@ begin
   if Candidate <> 0 then
     FreeLibrary(Candidate);
   Lept.Module.Error := '';
+  Lept.Module.LibraryPath := '';
   FillChar(Lept, SizeOf(Lept), 0);
   LibraryVersion := '';
   LeptBindReset;
@@ -314,7 +322,6 @@ procedure UnloadRuntime;
 begin
   UnloadCandidate(Lept.Module.Handle);
   Lept.Module.Handle := 0;
-  Lept.Module.LibraryPath := '';
   Lept.Module.Loaded := False;
 end;
 

@@ -1,31 +1,13 @@
 # CrossPascal Leptonica
 
-`crosspascal-leptonica` is the repository for CrossLept, the Object Pascal bindings for Leptonica's C API. This private testing draft contains 29 Pascal units, a Delphi package, test and tool source, and license notices.
+Build document-image tools in Object Pascal with Leptonica. Use the bindings to create and inspect Pix images, convert pixel formats, and prepare photographs or scans for later processing. The higher-level helpers manage common Pix operations from Pascal.
 
-The draft is a source subset. It contains no native DLL and no codec fixture data. Runtime use requires a separately obtained, verified Leptonica 1.87.0 Win64 DLL.
+## Try it on Windows x64
 
-## Verify the files
+1. Build `leptonica-1.87.0.dll` from the matching native source asset using its README. Place the resulting DLL in this repository's `bin` directory.
+2. In Delphi 13.2, open `examples\LeptonicaHello.dproj` and select Windows 64-bit. In Lazarus 4.8 with FPC 3.2.2, open `examples\LeptonicaHello.lpi` and build for Windows x64.
+3. Build and run the example. It writes a **256 × 96** grayscale gradient PNG beside the executable and prints its path.
 
-From this repository's root, use Python 3.12 or later:
+The project supplies its unit search paths. A standalone install needs this repository and its matching native source asset. The example works independently of OpenCV, TVM, and the model converter.
 
-```powershell
-python -B scripts/verify_source.py --index ARCHIVE-MANIFEST.json
-```
-
-This checks the current source inventory. Root `.git` metadata is allowed only through its explicit inventory entry. Other extra files cause a failure. Keep build outputs outside the checkout.
-
-## Use and testing scope
-
-Add `pascal/` to your compiler's unit search path. The Delphi package is `packages/delphi/crosspascal_crosslept.dpk`. Read [installation notes](INSTALL.md) before loading a native DLL.
-
-The separate complete package recorded 2,851 passed functional checks and one KNOWN marker for each of Delphi 37 and FPC 3.2.2. The test marked KNOWN was not run. The package also passed 14 codec checks per compiler using its matching DLL and fixtures. These are historical results, not fresh tests of this smaller source subset.
-
-The selected Pascal test files passed formatting and the formatter check. See [testing](TESTING.md), [build prerequisites](BUILD.md), and [known issues](KNOWN-ISSUES.md).
-
-`RELEASE-STATUS.json` preserves the historical Stage10 source candidate status; see the [GitHub release notes](https://github.com/pisarev/crosspascal/releases) for current delivery details and clean-clone check results.
-
-## License
-
-Original project code uses the [MIT license](LICENSE). The bindings include declarations derived from Leptonica headers, and the upstream notices remain included. See [third-party notices](THIRD-PARTY-NOTICES.md) for details about the bindings and native dependency notices.
-
-The older local project page in `docs/index.html` is preserved for reference. This README defines the current distribution.
+Use the runtime package for your IDE in [packages](packages/) to reuse the bindings. See [the build notes](BUILD.md), [known issues](KNOWN-ISSUES.md), and [third-party notices](THIRD-PARTY-NOTICES.md) for the exact codec inputs, upstream notices, and component limits.

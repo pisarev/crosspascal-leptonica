@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="/" />
+    <Name Value="crosspascal_crosslept" />
+    <Type Value="RunTime" />
+    <Author Value="Yuriy Pisarev" />
+    <Description Value="Object Pascal bindings and image helpers for Leptonica." />
+    <License Value="See the repository license and source notices." />
+    <Version Major="1" Minor="0" Release="0" />
+    <CompilerOptions>
+      <Version Value="11" />
+      <SearchPaths>
+        <OtherUnitFiles Value="../../pascal" />
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)" />
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <SyntaxMode Value="Delphi" />
+        </SyntaxOptions>
+      </Parsing>
+    </CompilerOptions>
+    <Files Count="37">
+      <Item1>
+        <Filename Value="../../pascal/CrossVision.Box.pas" />
+        <UnitName Value="CrossVision.Box" />
+      </Item1>
+      <Item2>
+        <Filename Value="../../pascal/CrossVision.Colormap.pas" />
+        <UnitName Value="CrossVision.Colormap" />
+      </Item2>
+      <Item3>
+        <Filename Value="../../pascal/CrossVision.FPix.pas" />
+        <UnitName Value="CrossVision.FPix" />
+      </Item3>
+      <Item4>
+        <Filename Value="../../pascal/CrossVision.Numa.pas" />
+        <UnitName Value="CrossVision.Numa" />
+      </Item4>
+      <Item5>
+        <Filename Value="../../pascal/CrossVision.Pix.pas" />
+        <UnitName Value="CrossVision.Pix" />
+      </Item5>
+      <Item6>
+        <Filename Value="../../pascal/CrossVision.Pixa.pas" />
+        <UnitName Value="CrossVision.Pixa" />
+      </Item6>
+      <Item7>
+        <Filename Value="../../pascal/CrossVision.Pta.pas" />
+        <UnitName Value="CrossVision.Pta" />
+      </Item7>
+      <Item8>
+        <Filename Value="../../pascal/CrossVision.Sel.pas" />
+        <UnitName Value="CrossVision.Sel" />
+      </Item8>
+      <Item9>
+        <Filename Value="../../pascal/Leptonica.Analysis.pas" />
+        <UnitName Value="Leptonica.Analysis" />
+      </Item9>
+      <Item10>
+        <Filename Value="../../pascal/Leptonica.Binarize.pas" />
+        <UnitName Value="Leptonica.Binarize" />
+      </Item10>
+      <Item11>
+        <Filename Value="../../pascal/Leptonica.Blend.pas" />
+        <UnitName Value="Leptonica.Blend" />
+      </Item11>
+      <Item12>
+        <Filename Value="../../pascal/Leptonica.Box.pas" />
+        <UnitName Value="Leptonica.Box" />
+      </Item12>
+      <Item13>
+        <Filename Value="../../pascal/Leptonica.Color.pas" />
+        <UnitName Value="Leptonica.Color" />
+      </Item13>
+      <Item14>
+        <Filename Value="../../pascal/Leptonica.Colormap.pas" />
+        <UnitName Value="Leptonica.Colormap" />
+      </Item14>
+      <Item15>
+        <Filename Value="../../pascal/Leptonica.Dewarp.pas" />
+        <UnitName Value="Leptonica.Dewarp" />
+      </Item15>
+      <Item16>
+        <Filename Value="../../pascal/Leptonica.Dna.pas" />
+        <UnitName Value="Leptonica.Dna" />
+      </Item16>
+      <Item17>
+        <Filename Value="../../pascal/Leptonica.Enhance.pas" />
+        <UnitName Value="Leptonica.Enhance" />
+      </Item17>
+      <Item18>
+        <Filename Value="../../pascal/Leptonica.Filter.pas" />
+        <UnitName Value="Leptonica.Filter" />
+      </Item18>
+      <Item19>
+        <Filename Value="../../pascal/Leptonica.FPix.pas" />
+        <UnitName Value="Leptonica.FPix" />
+      </Item19>
+      <Item20>
+        <Filename Value="../../pascal/Leptonica.Graphics.pas" />
+        <UnitName Value="Leptonica.Graphics" />
+      </Item20>
+      <Item21>
+        <Filename Value="../../pascal/Leptonica.IO.pas" />
+        <UnitName Value="Leptonica.IO" />
+      </Item21>
+      <Item22>
+        <Filename Value="../../pascal/Leptonica.Jbig.pas" />
+        <UnitName Value="Leptonica.Jbig" />
+      </Item22>
+      <Item23>
+        <Filename Value="../../pascal/Leptonica.Kernel.pas" />
+        <UnitName Value="Leptonica.Kernel" />
+      </Item23>
+      <Item24>
+        <Filename Value="../../pascal/Leptonica.Morph.pas" />
+        <UnitName Value="Leptonica.Morph" />
+      </Item24>
+      <Item25>
+        <Filename Value="../../pascal/Leptonica.Numa.pas" />
+        <UnitName Value="Leptonica.Numa" />
+      </Item25>
+      <Item26>
+        <Filename Value="../../pascal/Leptonica.Pageseg.pas" />
+        <UnitName Value="Leptonica.Pageseg" />
+      </Item26>
+      <Item27>
+        <Filename Value="../../pascal/Leptonica.pas" />
+        <UnitName Value="Leptonica" />
+      </Item27>
+      <Item28>
+        <Filename Value="../../pascal/Leptonica.Pix.pas" />
+        <UnitName Value="Leptonica.Pix" />
+      </Item28>
+      <Item29>
+        <Filename Value="../../pascal/Leptonica.Pixa.pas" />
+        <UnitName Value="Leptonica.Pixa" />
+      </Item29>
+      <Item30>
+        <Filename Value="../../pascal/Leptonica.Pta.pas" />
+        <UnitName Value="Leptonica.Pta" />
+      </Item30>
+      <Item31>
+        <Filename Value="../../pascal/Leptonica.Recog.pas" />
+        <UnitName Value="Leptonica.Recog" />
+      </Item31>
+      <Item32>
+        <Filename Value="../../pascal/Leptonica.Rop.pas" />
+        <UnitName Value="Leptonica.Rop" />
+      </Item32>
+      <Item33>
+        <Filename Value="../../pascal/Leptonica.Sarray.pas" />
+        <UnitName Value="Leptonica.Sarray" />
+      </Item33>
+      <Item34>
+        <Filename Value="../../pascal/Leptonica.Sel.pas" />
+        <UnitName Value="Leptonica.Sel" />
+      </Item34>
+      <Item35>
+        <Filename Value="../../pascal/Leptonica.Transform.pas" />
+        <UnitName Value="Leptonica.Transform" />
+      </Item35>
+      <Item36>
+        <Filename Value="../../pascal/Leptonica.Watershed.pas" />
+        <UnitName Value="Leptonica.Watershed" />
+      </Item36>
+      <Item37>
+        <Filename Value="../../pascal/LeptonicaTypes.pas" />
+        <UnitName Value="LeptonicaTypes" />
+      </Item37>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="FCL" />
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)" />
+    </UsageOptions>
+  </Package>
+</CONFIG>

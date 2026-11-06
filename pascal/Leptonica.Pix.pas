@@ -1,4 +1,11 @@
-﻿{ Copyright (c) 2026 Yuriy Pisarev. MIT license; see LICENSE. }
+﻿{ ************************************************************************** }
+{                                                                            }
+{ Leptonica.Pix                                                              }
+{                                                                            }
+{ Copyright © 2026 Yuriy Pisarev (ypisareff@outlook.com)                     }
+{                                                                            }
+{ ************************************************************************** }
+
 unit Leptonica.Pix;
 
 {$IFDEF FPC}

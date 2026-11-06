@@ -1,4 +1,11 @@
-﻿{ Copyright (c) 2026 Yuriy Pisarev. MIT license; see LICENSE. }
+﻿{ ************************************************************************** }
+{                                                                            }
+{ Leptonica.Box                                                              }
+{                                                                            }
+{ Copyright © 2026 Yuriy Pisarev (ypisareff@outlook.com)                     }
+{                                                                            }
+{ ************************************************************************** }
+
 unit Leptonica.Box;
 
 {$IFDEF FPC}
@@ -255,7 +262,7 @@ type
       TBoxaMedianDimensions = function(boxas: PBoxa; pmedw: PInteger; pmedh: PInteger; pmedwe: PInteger;
         pmedwo: PInteger; pmedhe: PInteger; pmedho: PInteger; pnadelw: PPNuma;
         pnadelh: PPNuma): Integer; cdecl;
-      TBoxaExtractSortedPattern = function(boxa: PBoxa; na: PNuma): PNuma; cdecl;
+      TBoxaExtractSortedPattern = function(boxa: PBoxa; na: PNuma): PNumaa; cdecl;
       TBoxaGetWhiteblocks = function(boxas: PBoxa; box: PBox; sortflag: Integer; maxboxes: Integer;
         maxoverlap: Single; maxperim: Integer; fract: Single; maxpops: Integer): PBoxa; cdecl;
       TBoxaPruneSortedOnOverlap = function(boxas: PBoxa; maxoverlap: Single): PBoxa; cdecl;
@@ -436,7 +443,7 @@ type
       BoxaGetWhiteblocks: TBoxaGetWhiteblocks;
       BoxaPruneSortedOnOverlap: TBoxaPruneSortedOnOverlap;
       BoxaaQuadtreeRegions: TBoxaaQuadtreeRegions;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

@@ -1,0 +1,329 @@
+{
+  "schema": "crosspascal-windows-source-index-v1",
+  "release_id": "early-access-008",
+  "repository": "crosspascal-leptonica",
+  "local_metadata": [
+    {
+      "kind": "file_or_directory",
+      "path": ".git",
+      "reason": "Git metadata"
+    }
+  ],
+  "members": [
+    {
+      "path": ".gitattributes",
+      "bytes": 9,
+      "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 49,
+      "sha256": "e9cdb721530f51a68b053f862c36680cbcceca15abcd9b316383d84bb9e84094"
+    },
+    {
+      "path": "BUILD.md",
+      "bytes": 929,
+      "sha256": "e6ffd557e0cdef28cca9d16541d61f9007c6b56bc853a804d67bac6562979d8c"
+    },
+    {
+      "path": "INSTALL.md",
+      "bytes": 663,
+      "sha256": "492342338e5eec3b67a0f26a0b2be3a5f99c462292d9590ecca06806e896bba6"
+    },
+    {
+      "path": "KNOWN-ISSUES.md",
+      "bytes": 521,
+      "sha256": "af8a2be96337ee6fe1625ff153da9f3ce1c8ca06e88e8200af94593383ca6387"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "sha256": "04b643fe3d2d95be3b9a0ad9d3882d00a9b2d9dfb74694f35fe8edfc77e67815"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1225,
+      "sha256": "b017150dc53bf7bb684014adf50e22cf1f0266d4e2631bc7805566fb86a2293a"
+    },
+    {
+      "path": "TESTING.md",
+      "bytes": 358,
+      "sha256": "20e1e4ee1c6bdbb6ae0fb8cc4cae240896e61739f4490196e91508792c1bf843"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "bytes": 1139,
+      "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
+    },
+    {
+      "path": "docs/index.html",
+      "bytes": 6280,
+      "sha256": "f6b8b410b2546d94243882b7ea94fd797bc4028ef313927b9f047867835ca45a"
+    },
+    {
+      "path": "examples/LeptonicaHello.dpr",
+      "bytes": 2474,
+      "sha256": "6370eac56ef4cabc2e8b73b44d9042972a1122be0b35a8d63036621c94f73509"
+    },
+    {
+      "path": "examples/LeptonicaHello.dproj",
+      "bytes": 11084,
+      "sha256": "acf0ce19adcd3276ace0464c3e35f47000412fa20c057fdf35a35d01c869ee5f"
+    },
+    {
+      "path": "examples/LeptonicaHello.lpi",
+      "bytes": 1235,
+      "sha256": "f3f70888c484648448a068e281a10ca92bee412f9c1b00d4cff454f1eee214e1"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 636,
+      "sha256": "6973865864fd8f366ceeec0356650b621ebc34e5362e5bcb631f508d5bf9cfe0"
+    },
+    {
+      "path": "licenses/third-party/giflib/COPYING",
+      "bytes": 1088,
+      "sha256": "0c9b7990ecdca88b676db232c226548ac408b279f550d424d996f0d83591dd8e"
+    },
+    {
+      "path": "licenses/third-party/leptonica/leptonica-license.txt",
+      "bytes": 1521,
+      "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806"
+    },
+    {
+      "path": "licenses/third-party/libjpeg-turbo/LICENSE.md",
+      "bytes": 5620,
+      "sha256": "e548c96c0c09397c94b5c5531836c02ff2c403f1f2b130cad8e3ec9439b5a7cc"
+    },
+    {
+      "path": "licenses/third-party/libjpeg-turbo/README.ijg",
+      "bytes": 12715,
+      "sha256": "f4a85f8677ca4e41b185c0a9f7c31a30ddb9ce43c561483ee92ef12db37c2a10"
+    },
+    {
+      "path": "licenses/third-party/libpng/LICENSE",
+      "bytes": 5345,
+      "sha256": "7317e078e2d3b5d7ba5a6159e650945153262b44b76f6700f8e9edb261c5143e"
+    },
+    {
+      "path": "licenses/third-party/libtiff/LICENSE.md",
+      "bytes": 1164,
+      "sha256": "0780558a8bfba0af1160ec1ff11ade4f41c0d7deafd6ecfc796b492a788e380d"
+    },
+    {
+      "path": "licenses/third-party/libwebp/COPYING",
+      "bytes": 1496,
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+    },
+    {
+      "path": "licenses/third-party/openjpeg/LICENSE",
+      "bytes": 2112,
+      "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+    },
+    {
+      "path": "licenses/third-party/zlib/LICENSE",
+      "bytes": 1002,
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    {
+      "path": "packages/delphi/crosspascal_crosslept.dpk",
+      "bytes": 2891,
+      "sha256": "13b41e644d702d3febd52721a72f853d3a0ed2caece1a0177ed4042785c3aa3d"
+    },
+    {
+      "path": "packages/lazarus/crosspascal_crosslept.lpk",
+      "bytes": 6306,
+      "sha256": "b3e15db0a3553e646d11a6ed7946857b4308752879542f91f51debe768faef54"
+    },
+    {
+      "path": "pascal/CrossVision.Box.pas",
+      "bytes": 9865,
+      "sha256": "6a4e0ce15d846fb650eaf348cad4cdea8394f92eede2d9976ac48c4f893d7b6f"
+    },
+    {
+      "path": "pascal/CrossVision.Colormap.pas",
+      "bytes": 8154,
+      "sha256": "8f5160c32ed05103f4e8eb60696e962469564b9a6918366689d7b2714ebed31a"
+    },
+    {
+      "path": "pascal/CrossVision.FPix.pas",
+      "bytes": 8146,
+      "sha256": "c238dce9aaa1e2b4a9dc9cbfa6944b4bf5acbcc5e9448115bb8e309e209d1e17"
+    },
+    {
+      "path": "pascal/CrossVision.Numa.pas",
+      "bytes": 3995,
+      "sha256": "6aa69c955b1247df6935b6df86519a71991d21132f55b596131c6bc4ec130c27"
+    },
+    {
+      "path": "pascal/CrossVision.Pix.pas",
+      "bytes": 10608,
+      "sha256": "d6b80c50281b0b46129cd421bb7f1e17e4c9385ef2d56b8bd9c43e0471b89f8c"
+    },
+    {
+      "path": "pascal/CrossVision.Pixa.pas",
+      "bytes": 3893,
+      "sha256": "545ec51f325d90c2de9e7c726c4b1f082abf49b6ae685ac2d39b44dbf866e392"
+    },
+    {
+      "path": "pascal/CrossVision.Pta.pas",
+      "bytes": 3962,
+      "sha256": "2092185ee649cc36cccd28161a3595886fbb465fd81a83d3d62c9cae059a84c5"
+    },
+    {
+      "path": "pascal/CrossVision.Sel.pas",
+      "bytes": 8250,
+      "sha256": "b714cac15e391d3f49525bf5d520c6257a2e4496fb31969c4da49cca59555a48"
+    },
+    {
+      "path": "pascal/Leptonica.Analysis.pas",
+      "bytes": 22385,
+      "sha256": "7916c90c7fedbc7c63dd5bfe412ac7f262823c3f46dcd62800b6fcafbd5ca3b9"
+    },
+    {
+      "path": "pascal/Leptonica.Binarize.pas",
+      "bytes": 8555,
+      "sha256": "f431cdc6ffa2c8ca876e177f2d448599474a6781d3be2a4725baec375053ea65"
+    },
+    {
+      "path": "pascal/Leptonica.Blend.pas",
+      "bytes": 5736,
+      "sha256": "ccc4554d7b520c6268a08397b4b0d9a03fc75d9464e94c2190a9312cbf7e56ee"
+    },
+    {
+      "path": "pascal/Leptonica.Box.pas",
+      "bytes": 38303,
+      "sha256": "7e6d1d83c31c70eb9269414f161e5e144c73699dcbaa89ee0714f52d7202e118"
+    },
+    {
+      "path": "pascal/Leptonica.Color.pas",
+      "bytes": 25275,
+      "sha256": "0fa3133a66f2251ef8abd6703ee64fb843297925f5fda6204f42cd9f17100f57"
+    },
+    {
+      "path": "pascal/Leptonica.Colormap.pas",
+      "bytes": 14387,
+      "sha256": "3113ca6bad2ee8765fad733f28cd214f737a6a103a3c4c17fdf87526045f6337"
+    },
+    {
+      "path": "pascal/Leptonica.Dewarp.pas",
+      "bytes": 12174,
+      "sha256": "ac778d8d428ceba6c1799cddac2c8ea34fefe61d10e9befc2be5c277830f3138"
+    },
+    {
+      "path": "pascal/Leptonica.Dna.pas",
+      "bytes": 12809,
+      "sha256": "9fa3ddb017eac45d8419db26e3177438f0598dcb2dc4802317e5aa817dc0b03e"
+    },
+    {
+      "path": "pascal/Leptonica.Enhance.pas",
+      "bytes": 10493,
+      "sha256": "0f871abea65daa635399bfb45a2bc84dc13426d8e5807cb81648df8a6bff5c43"
+    },
+    {
+      "path": "pascal/Leptonica.FPix.pas",
+      "bytes": 19656,
+      "sha256": "e949f5abc23cd692f5ae4806021819cb656a6a5781d143c5ab04e463bf797065"
+    },
+    {
+      "path": "pascal/Leptonica.Filter.pas",
+      "bytes": 9323,
+      "sha256": "913e7de15fdb7ed9233468ffc0f8ffe6c3e620d97853a5b971e20497bd91651c"
+    },
+    {
+      "path": "pascal/Leptonica.Graphics.pas",
+      "bytes": 20102,
+      "sha256": "1d71e976f59d1b02ff72a26ef5f3a2947d8015b7ea4dd7b862eb74ca1a068c95"
+    },
+    {
+      "path": "pascal/Leptonica.IO.pas",
+      "bytes": 30262,
+      "sha256": "9c8a57350f5a7253eb2015e1a50cbe49c7283b3822ba627b15d86c529bb921f1"
+    },
+    {
+      "path": "pascal/Leptonica.Jbig.pas",
+      "bytes": 6079,
+      "sha256": "dfa82a434511a1bf0f2aa7f40f69109c61b9205d355fe9a8078f20c00ede4593"
+    },
+    {
+      "path": "pascal/Leptonica.Kernel.pas",
+      "bytes": 5590,
+      "sha256": "b024cb10eac396e0d1fe543233a80d51fb8109a518a05d2143b5cc492170673e"
+    },
+    {
+      "path": "pascal/Leptonica.Morph.pas",
+      "bytes": 17033,
+      "sha256": "518520c1763a6959f17fe735b838d725dd2de1956507e607f74b80a2adc03ad0"
+    },
+    {
+      "path": "pascal/Leptonica.Numa.pas",
+      "bytes": 34442,
+      "sha256": "7aac209dd2432a676b093a32467fc81d21cbdaf4a5d3ed1db547c71e737ad360"
+    },
+    {
+      "path": "pascal/Leptonica.Pageseg.pas",
+      "bytes": 3107,
+      "sha256": "6e4365a389cd579fddb9547bdab66797cb9ffc70497f2d5111237d9c132e1530"
+    },
+    {
+      "path": "pascal/Leptonica.Pix.pas",
+      "bytes": 182423,
+      "sha256": "67f69d3c2ea3f8c3af79bcab59202d3ba0d8bea0dac75cede953bee81ecc69d5"
+    },
+    {
+      "path": "pascal/Leptonica.Pixa.pas",
+      "bytes": 50117,
+      "sha256": "28cdc22a1d10c3407f2ff740a25c2fadf8430c97b49cb8fdef57b8b2fa13c55c"
+    },
+    {
+      "path": "pascal/Leptonica.Pta.pas",
+      "bytes": 17475,
+      "sha256": "f0d0982a90c2428e2db5ed49bafa0e32e3d7788a931bd716d0d37de194ce8bdc"
+    },
+    {
+      "path": "pascal/Leptonica.Recog.pas",
+      "bytes": 13995,
+      "sha256": "a781a60b4ccc3447c7f3888e27b4fd6fa7dbb6237fba61aa71cc5273ab45f34c"
+    },
+    {
+      "path": "pascal/Leptonica.Rop.pas",
+      "bytes": 10926,
+      "sha256": "8b06396308215a426a95f237a1582bc7445880d5e50707f95693df30688ee721"
+    },
+    {
+      "path": "pascal/Leptonica.Sarray.pas",
+      "bytes": 10187,
+      "sha256": "aac4091f87ba5f23d828ff528ee55377a7c15e9a959d3b4e03408641c2578246"
+    },
+    {
+      "path": "pascal/Leptonica.Sel.pas",
+      "bytes": 10009,
+      "sha256": "00b7b2bc5a41a1fd3bbae70177750d04398912979c901d0c655a64aa7ab6d4a9"
+    },
+    {
+      "path": "pascal/Leptonica.Transform.pas",
+      "bytes": 30016,
+      "sha256": "0631e4d2315b3ab181b90db5300035bdd847d0144f88e0436f0c2a7107fd5bc6"
+    },
+    {
+      "path": "pascal/Leptonica.Watershed.pas",
+      "bytes": 2050,
+      "sha256": "043ee5ec8feac985c51086724872f1ce3583d3731545dd5d4c2918d7ba9cdf01"
+    },
+    {
+      "path": "pascal/Leptonica.pas",
+      "bytes": 14938,
+      "sha256": "a0e1fe985f458ef962814e208dac33782ae939d2ccb29595f269b8b84c2d2c51"
+    },
+    {
+      "path": "pascal/LeptonicaTypes.pas",
+      "bytes": 9310,
+      "sha256": "a95dd76243c1d6f3131398632f4718e34d24fb6e15feb464caea6659f8586d69"
+    },
+    {
+      "path": "scripts/verify_source.py",
+      "bytes": 13549,
+      "sha256": "e36b010d92dd4a3b209c0e9fffb8492f492278c9bb65827a7b0dcee8a3fbd4a0"
+    }
+  ]
+}

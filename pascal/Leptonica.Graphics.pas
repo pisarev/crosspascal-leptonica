@@ -1,4 +1,11 @@
-﻿{ Copyright (c) 2026 Yuriy Pisarev. MIT license; see LICENSE. }
+﻿{ ************************************************************************** }
+{                                                                            }
+{ Leptonica.Graphics                                                         }
+{                                                                            }
+{ Copyright © 2026 Yuriy Pisarev (ypisareff@outlook.com)                     }
+{                                                                            }
+{ ************************************************************************** }
+
 unit Leptonica.Graphics;
 
 {$IFDEF FPC}
@@ -42,22 +49,22 @@ type
         title: PAnsiChar): Integer; cdecl;
       TGplotSimple2 = function(na1: PNuma; na2: PNuma; outformat: Integer; outroot: PAnsiChar;
         title: PAnsiChar): Integer; cdecl;
-      TGplotSimpleN = function(naa: PNuma; outformat: Integer; outroot: PAnsiChar;
+      TGplotSimpleN = function(naa: PNumaa; outformat: Integer; outroot: PAnsiChar;
         title: PAnsiChar): Integer; cdecl;
       TGplotSimplePix1 = function(na: PNuma; title: PAnsiChar): PPix; cdecl;
       TGplotSimplePix2 = function(na1: PNuma; na2: PNuma; title: PAnsiChar): PPix; cdecl;
-      TGplotSimplePixN = function(naa: PNuma; title: PAnsiChar): PPix; cdecl;
+      TGplotSimplePixN = function(naa: PNumaa; title: PAnsiChar): PPix; cdecl;
       TGplotSimpleXY1 = function(nax: PNuma; nay: PNuma; plotstyle: Integer; outformat: Integer;
-        outroot: PAnsiChar; title: PAnsiChar): PPix; cdecl;
+        outroot: PAnsiChar; title: PAnsiChar): PGPlot; cdecl;
       TGplotSimpleXY2 = function(nax: PNuma; nay1: PNuma; nay2: PNuma; plotstyle: Integer; outformat: Integer;
-        outroot: PAnsiChar; title: PAnsiChar): PPix; cdecl;
-      TGplotSimpleXYN = function(nax: PNuma; naay: PNuma; plotstyle: Integer; outformat: Integer;
-        outroot: PAnsiChar; title: PAnsiChar): PPix; cdecl;
+        outroot: PAnsiChar; title: PAnsiChar): PGPlot; cdecl;
+      TGplotSimpleXYN = function(nax: PNuma; naay: PNumaa; plotstyle: Integer; outformat: Integer;
+        outroot: PAnsiChar; title: PAnsiChar): PGPlot; cdecl;
       TGplotGeneralPix1 = function(na: PNuma; plotstyle: Integer; rootname: PAnsiChar; title: PAnsiChar;
         xlabel: PAnsiChar; ylabel: PAnsiChar): PPix; cdecl;
       TGplotGeneralPix2 = function(na1: PNuma; na2: PNuma; plotstyle: Integer; rootname: PAnsiChar;
         title: PAnsiChar; xlabel: PAnsiChar; ylabel: PAnsiChar): PPix; cdecl;
-      TGplotGeneralPixN = function(nax: PNuma; naay: PNuma; plotstyle: Integer; rootname: PAnsiChar;
+      TGplotGeneralPixN = function(nax: PNuma; naay: PNumaa; plotstyle: Integer; rootname: PAnsiChar;
         title: PAnsiChar; xlabel: PAnsiChar; ylabel: PAnsiChar): PPix; cdecl;
       TGplotRead = function(filename: PAnsiChar): PGPlot; cdecl;
       TGplotWrite = function(filename: PAnsiChar; gplot: PGPlot): Integer; cdecl;
@@ -70,9 +77,9 @@ type
         outline: Integer): PPta; cdecl;
       TGeneratePtaHashBoxa = function(boxa: PBoxa; spacing: Integer; width: Integer; orient: Integer;
         outline: Integer; removedups: Integer): PPta; cdecl;
-      TGeneratePtaaBoxa = function(boxa: PBoxa): PPta; cdecl;
+      TGeneratePtaaBoxa = function(boxa: PBoxa): PPtaa; cdecl;
       TGeneratePtaaHashBoxa = function(boxa: PBoxa; spacing: Integer; width: Integer; orient: Integer;
-        outline: Integer): PPta; cdecl;
+        outline: Integer): PPtaa; cdecl;
       TGeneratePtaPolyline = function(ptas: PPta; width: Integer; closeflag: Integer;
         removedups: Integer): PPta; cdecl;
       TGeneratePtaGrid = function(w: Integer; h: Integer; nx: Integer; ny: Integer;
@@ -129,7 +136,7 @@ type
         bval: Byte; fract: Single; closeflag: Integer; removedups: Integer): Integer; cdecl;
       TPixRenderGridArb = function(pix: PPix; nx: Integer; ny: Integer; width: Integer; rval: Byte;
         gval: Byte; bval: Byte): Integer; cdecl;
-      TPixRenderRandomCmapPtaa = function(pix: PPix; ptaa: Pointer; polyflag: Integer; width: Integer;
+      TPixRenderRandomCmapPtaa = function(pix: PPix; ptaa: PPtaa; polyflag: Integer; width: Integer;
         closeflag: Integer): PPix; cdecl;
       TPixRenderPolygon = function(ptas: PPta; width: Integer; pxmin: PInteger; pymin: PInteger): PPix; cdecl;
       TPixRenderContours = function(pixs: PPix; startval: Integer; incr: Integer;
@@ -234,7 +241,7 @@ type
       BmfGetWordWidths: TBmfGetWordWidths;
       BmfGetStringWidth: TBmfGetStringWidth;
       L_chooseDisplayProg: TL_chooseDisplayProg;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

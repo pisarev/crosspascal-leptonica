@@ -1,9 +1,13 @@
-# Build prerequisites
+# Build the Leptonica library
 
-The source subset contains 29 Pascal binding units and `packages/delphi/crosspascal_crosslept.dpk`. It omits the native DLL, the external native build context, and six codec fixture files.
+Download the matching `leptonica-windows-x64` source asset from [CrossPascal Releases](https://github.com/pisarev/crosspascal/releases). Extract it and follow its README for the standalone build with a Linux Docker engine. The full SDK also has an [installation script](https://github.com/pisarev/crosspascal/blob/main/docs/WINDOWS-EARLY-ACCESS.md).
 
-The build helpers describe a source-only derivative of a separately pinned native build. The setjmp compatibility header adds a copyright notice and retains its previous 712-byte body exactly. The consumer lock and wrapper pins identify this derived context; the original 147-file input lock, Dockerfile, and compiler launcher retain their accepted bytes. Historical native results belong to the ancestor build, and no DLL has been built or accepted from this derived context. External inputs listed in the locks are still required; this source subset is not a complete native build kit.
+The source asset contains the Leptonica 1.87.0 sources, codec sources, toolchain configuration, and original notices. Check the asset from its extracted directory with Python 3.10 or later:
 
-`tools/package-archives.py` builds the older complete/source archive pair and requires the verified native DLL. `tools/verify-archive.py` checks those older archive contracts. Neither is the entry point for checking this selected source subset; use `scripts/verify_source.py --index ARCHIVE-MANIFEST.json`.
+```text
+python -B tools/verify-source.py
+```
 
-No native rebuild or fresh full Delphi/FPC suite has been run for this publication copy. The five Pascal test files selected for final preparation passed formatting and the formatter check. Keep compiler output outside the checkout.
+The portable Docker recipe uses the pinned public base image and Ubuntu package inputs. The source asset identifies those external inputs by checksum.
+
+Place the resulting `leptonica-1.87.0.dll` in this repository's `bin` directory. Follow [INSTALL.md](INSTALL.md) to build the example with Delphi or Lazarus.

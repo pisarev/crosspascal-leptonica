@@ -1,13 +1,28 @@
-﻿{ Copyright (c) 2026 Yuriy Pisarev. MIT license; see LICENSE. }
+﻿{ ************************************************************************** }
+{                                                                            }
+{ crosspascal_crosslept                                                      }
+{                                                                            }
+{ Copyright © 2026 Yuriy Pisarev (ypisareff@outlook.com)                     }
+{                                                                            }
+{ ************************************************************************** }
+
 package crosspascal_crosslept;
 
 {$RUNONLY}
-{$DESCRIPTION 'Object Pascal bindings for leptonica'}
+{$DESCRIPTION 'Object Pascal bindings and image helpers for Leptonica'}
 
 requires
   rtl;
 
 contains
+  CrossVision.Box in '..\..\pascal\CrossVision.Box.pas',
+  CrossVision.Colormap in '..\..\pascal\CrossVision.Colormap.pas',
+  CrossVision.FPix in '..\..\pascal\CrossVision.FPix.pas',
+  CrossVision.Numa in '..\..\pascal\CrossVision.Numa.pas',
+  CrossVision.Pix in '..\..\pascal\CrossVision.Pix.pas',
+  CrossVision.Pixa in '..\..\pascal\CrossVision.Pixa.pas',
+  CrossVision.Pta in '..\..\pascal\CrossVision.Pta.pas',
+  CrossVision.Sel in '..\..\pascal\CrossVision.Sel.pas',
   Leptonica.Analysis in '..\..\pascal\Leptonica.Analysis.pas',
   Leptonica.Binarize in '..\..\pascal\Leptonica.Binarize.pas',
   Leptonica.Blend in '..\..\pascal\Leptonica.Blend.pas',

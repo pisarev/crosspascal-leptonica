@@ -1,4 +1,11 @@
-﻿{ Copyright (c) 2026 Yuriy Pisarev. MIT license; see LICENSE. }
+﻿{ ************************************************************************** }
+{                                                                            }
+{ Leptonica.Color                                                            }
+{                                                                            }
+{ Copyright © 2026 Yuriy Pisarev (ypisareff@outlook.com)                     }
+{                                                                            }
+{ ************************************************************************** }
+
 unit Leptonica.Color;
 
 {$IFDEF FPC}
@@ -84,12 +91,12 @@ type
         puval: PInteger; pvval: PInteger): Integer; cdecl;
       TConvertYUVToRGB = function(yval: Integer; uval: Integer; vval: Integer; prval: PInteger;
         pgval: PInteger; pbval: PInteger): Integer; cdecl;
-      TPixConvertRGBToXYZ = function(pixs: PPix): PFPix; cdecl;
+      TPixConvertRGBToXYZ = function(pixs: PPix): PFPixa; cdecl;
       TConvertRGBToXYZ = function(rval: Integer; gval: Integer; bval: Integer; pfxval: PSingle;
         pfyval: PSingle; pfzval: PSingle): Integer; cdecl;
       TConvertLABToXYZ = function(lval: Single; aval: Single; bval: Single; pxval: PSingle; pyval: PSingle;
         pzval: PSingle): Integer; cdecl;
-      TPixConvertRGBToLAB = function(pixs: PPix): PFPix; cdecl;
+      TPixConvertRGBToLAB = function(pixs: PPix): PFPixa; cdecl;
       TConvertRGBToLAB = function(rval: Integer; gval: Integer; bval: Integer; pflval: PSingle;
         pfaval: PSingle; pfbval: PSingle): Integer; cdecl;
       TConvertLABToRGB = function(flval: Single; faval: Single; fbval: Single; prval: PInteger;
@@ -277,7 +284,7 @@ type
       PixConvert32To8: TPixConvert32To8;
       PixRemoveAlpha: TPixRemoveAlpha;
       PixConvertGrayToSubpixelRGB: TPixConvertGrayToSubpixelRGB;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

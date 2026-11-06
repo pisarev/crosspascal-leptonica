@@ -1,9 +1,7 @@
-# Known issues
+# Known limitations
 
-The native DLL and six codec fixtures are absent. Fixture-dependent tests and the complete native build require additional matching inputs.
+LeptonicaHello was verified on Windows x64 with Delphi 13.2 and Lazarus 4.8 with FPC 3.2.2. The check covers creating and writing a grayscale PNG. The full set of codecs and image helpers has its own tests and is outside this example's coverage.
 
-The 29 binding units retain their accepted bytes. Five Pascal test files passed final source preparation and the formatter check. Comment cleanup in selected Python and PowerShell helpers preserved their executable code and data. Later validation-wrapper changes have separate unit coverage described in [testing](TESTING.md).
+The example writes filenames through Leptonica's narrow-character file API. Choose a path representable in your Windows system code page.
 
-The historical full suite retained one KNOWN marker for a test that was not run. That marker does not establish a defect in the final DLL. The historical results do not establish fresh functionality for this source subset or general safety on arbitrary hostile images.
-
-The older archive tools support the complete/source archive pair from the native package. Use the new source inventory checker for this selected subset. The older project page is retained as reference material.
+See the [build instructions](BUILD.md) and [third-party notices](THIRD-PARTY-NOTICES.md) for native dependencies.

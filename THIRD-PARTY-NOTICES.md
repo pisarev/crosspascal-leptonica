@@ -2,7 +2,7 @@
 
 Original CrossLept code and documentation use the root MIT license. The Pascal binding declarations include mappings from Leptonica C headers. The Leptonica notice is retained alongside them.
 
-The native DLL and its codec libraries are not distributed in this source subset. Their original notices remain available for the corresponding complete native package. They do not replace the license review needed for a different binary or version.
+The native library is built locally from the Leptonica 1.87.0 companion source asset. The original Leptonica and codec dependency notices are preserved below.
 
 | Component | Preserved notice |
 | --- | --- |

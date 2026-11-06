@@ -1,13 +1,7 @@
-# Installation notes
+# Install and try Leptonica
 
-Add `pascal/` to your Pascal compiler's unit search path. An application needs a matching Leptonica 1.87.0 Win64 DLL, obtained separately.
+Build `bin/leptonica-1.87.0.dll` from the matching companion source asset. See the [build guide](BUILD.md).
 
-The DLL used in the accepted complete package had this SHA-256:
+In Delphi 13.2, open `examples/LeptonicaHello.dproj` and select Windows 64-bit. In Lazarus 4.8, open `examples/LeptonicaHello.lpi` and use FPC 3.2.2 for Windows x64. Build and run the project. It prints the loaded library path and writes a 256 × 96 grayscale gradient PNG beside the executable. Press Enter to close the console.
 
-```text
-5d85e3f3c0a586eda168aa5757fd657ebcdfd173f1db6eb25451061504e48700
-```
-
-`tools/install-verified-win64.ps1` requires `DllSource`, `ExpectedSha256`, and a new or empty `InstallDirectory`. The script has not been executed against this selected publication copy. No `bin/leptonica-1.87.0.dll` is included.
-
-Full codec testing also needs the six fixtures and other inputs from the matching complete distribution. This source subset does not supply them. See [testing scope](TESTING.md).
+Use `pascal/` in the unit search path when adding the bindings to your own project. The example already provides its search paths. Keep its directory layout so it can locate the native library.
