@@ -1,6 +1,6 @@
 {
   "schema": "crosspascal-windows-source-index-v1",
-  "release_id": "early-access-012",
+  "release_id": "early-access-013",
   "repository": "crosspascal-leptonica",
   "local_metadata": [
     {
@@ -112,8 +112,8 @@
     },
     {
       "path": "packages/delphi/crosspascal_crosslept.dpk",
-      "bytes": 2891,
-      "sha256": "13b41e644d702d3febd52721a72f853d3a0ed2caece1a0177ed4042785c3aa3d"
+      "bytes": 2832,
+      "sha256": "ab31232c64f894dd566e9edaaed6848f2046a71a477952a7047141699a627a1c"
     },
     {
       "path": "packages/lazarus/crosspascal_crosslept.lpk",
@@ -122,23 +122,23 @@
     },
     {
       "path": "pascal/CrossVision.Box.pas",
-      "bytes": 9841,
-      "sha256": "e26a629e84e2cab001bccf65de932a54cd8daef781bd3fc03fd8491f5685d57a"
+      "bytes": 9865,
+      "sha256": "1dfa3dba49005836fd30700daae2831e942b72fd2d873f6d1f9ab4dfca20a733"
     },
     {
       "path": "pascal/CrossVision.Colormap.pas",
-      "bytes": 8130,
-      "sha256": "7475dd03fbbd082a5d6cb49c61d06882b0585b218348b2f868cf295373631e9b"
+      "bytes": 8154,
+      "sha256": "eef6f9f77adccf15d20cb8d94b8c46b5b3fe224e0da99079b3c03687d5a0b9f7"
     },
     {
       "path": "pascal/CrossVision.FPix.pas",
-      "bytes": 8122,
-      "sha256": "387569368eb42308740270e7aebcb4b026d5254e1b013426533b5e1cde297574"
+      "bytes": 8146,
+      "sha256": "80a0bca1c617856c585583f48a81a66f3332ff9c9b6cdc930f95649704ae6bf3"
     },
     {
       "path": "pascal/CrossVision.Numa.pas",
-      "bytes": 3971,
-      "sha256": "291f5d54d2f2612e95bc3707060ae17d39a8ef2cdb10ad4083b6870ed586b376"
+      "bytes": 3995,
+      "sha256": "2c1a43692ebded6f706d3ad684d5d924f735db08137d8ec8b33be84fbb738185"
     },
     {
       "path": "pascal/CrossVision.Pix.pas",
@@ -147,18 +147,18 @@
     },
     {
       "path": "pascal/CrossVision.Pixa.pas",
-      "bytes": 3869,
-      "sha256": "39823d494a1c314815ac2f92a08e029038222870f9d3c89864c8d2411b888627"
+      "bytes": 3893,
+      "sha256": "8229bdec8bd8522b9b157ba3e3eeaf256072d8e500291f4278a42999c027bf4d"
     },
     {
       "path": "pascal/CrossVision.Pta.pas",
-      "bytes": 3938,
-      "sha256": "9f6a0aabe59c1af148c53d5fcb572c350bcf9eb18ecc4affa59e8cf6aa17df56"
+      "bytes": 3962,
+      "sha256": "803ff193920d96a49ceb4ea2d1c5b1167c212f9433da5dd717f9a5a0dacdfbda"
     },
     {
       "path": "pascal/CrossVision.Sel.pas",
-      "bytes": 8226,
-      "sha256": "586e83529c34817cb9f3620ceb5abb4106ecfa69cab3c7909ef4349161848c8e"
+      "bytes": 8250,
+      "sha256": "c22d5ec2a92d2b784e7593d7bd41150fa799438dd78fed6ae7871d273e950c51"
     },
     {
       "path": "pascal/Leptonica.Analysis.pas",
