@@ -1,6 +1,6 @@
 {
   "schema": "crosspascal-windows-source-index-v1",
-  "release_id": "early-access-013",
+  "release_id": "early-access-015",
   "repository": "crosspascal-leptonica",
   "local_metadata": [
     {
@@ -26,6 +26,36 @@
       "sha256": "e6ffd557e0cdef28cca9d16541d61f9007c6b56bc853a804d67bac6562979d8c"
     },
     {
+      "path": "INSTALL.md",
+      "bytes": 663,
+      "sha256": "492342338e5eec3b67a0f26a0b2be3a5f99c462292d9590ecca06806e896bba6"
+    },
+    {
+      "path": "KNOWN-ISSUES.md",
+      "bytes": 521,
+      "sha256": "af8a2be96337ee6fe1625ff153da9f3ce1c8ca06e88e8200af94593383ca6387"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "sha256": "04b643fe3d2d95be3b9a0ad9d3882d00a9b2d9dfb74694f35fe8edfc77e67815"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1225,
+      "sha256": "b017150dc53bf7bb684014adf50e22cf1f0266d4e2631bc7805566fb86a2293a"
+    },
+    {
+      "path": "TESTING.md",
+      "bytes": 358,
+      "sha256": "20e1e4ee1c6bdbb6ae0fb8cc4cae240896e61739f4490196e91508792c1bf843"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "bytes": 1139,
+      "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
+    },
+    {
       "path": "docs/index.html",
       "bytes": 6280,
       "sha256": "f6b8b410b2546d94243882b7ea94fd797bc4028ef313927b9f047867835ca45a"
@@ -49,21 +79,6 @@
       "path": "examples/README.md",
       "bytes": 636,
       "sha256": "6973865864fd8f366ceeec0356650b621ebc34e5362e5bcb631f508d5bf9cfe0"
-    },
-    {
-      "path": "INSTALL.md",
-      "bytes": 663,
-      "sha256": "492342338e5eec3b67a0f26a0b2be3a5f99c462292d9590ecca06806e896bba6"
-    },
-    {
-      "path": "KNOWN-ISSUES.md",
-      "bytes": 521,
-      "sha256": "af8a2be96337ee6fe1625ff153da9f3ce1c8ca06e88e8200af94593383ca6387"
-    },
-    {
-      "path": "LICENSE",
-      "bytes": 1070,
-      "sha256": "04b643fe3d2d95be3b9a0ad9d3882d00a9b2d9dfb74694f35fe8edfc77e67815"
     },
     {
       "path": "licenses/third-party/giflib/COPYING",
@@ -206,14 +221,14 @@
       "sha256": "0f871abea65daa635399bfb45a2bc84dc13426d8e5807cb81648df8a6bff5c43"
     },
     {
-      "path": "pascal/Leptonica.Filter.pas",
-      "bytes": 9323,
-      "sha256": "913e7de15fdb7ed9233468ffc0f8ffe6c3e620d97853a5b971e20497bd91651c"
-    },
-    {
       "path": "pascal/Leptonica.FPix.pas",
       "bytes": 19656,
       "sha256": "e949f5abc23cd692f5ae4806021819cb656a6a5781d143c5ab04e463bf797065"
+    },
+    {
+      "path": "pascal/Leptonica.Filter.pas",
+      "bytes": 9323,
+      "sha256": "913e7de15fdb7ed9233468ffc0f8ffe6c3e620d97853a5b971e20497bd91651c"
     },
     {
       "path": "pascal/Leptonica.Graphics.pas",
@@ -249,11 +264,6 @@
       "path": "pascal/Leptonica.Pageseg.pas",
       "bytes": 3107,
       "sha256": "6e4365a389cd579fddb9547bdab66797cb9ffc70497f2d5111237d9c132e1530"
-    },
-    {
-      "path": "pascal/Leptonica.pas",
-      "bytes": 14938,
-      "sha256": "a0e1fe985f458ef962814e208dac33782ae939d2ccb29595f269b8b84c2d2c51"
     },
     {
       "path": "pascal/Leptonica.Pix.pas",
@@ -301,29 +311,19 @@
       "sha256": "043ee5ec8feac985c51086724872f1ce3583d3731545dd5d4c2918d7ba9cdf01"
     },
     {
+      "path": "pascal/Leptonica.pas",
+      "bytes": 14938,
+      "sha256": "a0e1fe985f458ef962814e208dac33782ae939d2ccb29595f269b8b84c2d2c51"
+    },
+    {
       "path": "pascal/LeptonicaTypes.pas",
       "bytes": 9310,
       "sha256": "a95dd76243c1d6f3131398632f4718e34d24fb6e15feb464caea6659f8586d69"
     },
     {
-      "path": "README.md",
-      "bytes": 1225,
-      "sha256": "b017150dc53bf7bb684014adf50e22cf1f0266d4e2631bc7805566fb86a2293a"
-    },
-    {
       "path": "scripts/verify_source.py",
       "bytes": 13549,
       "sha256": "e36b010d92dd4a3b209c0e9fffb8492f492278c9bb65827a7b0dcee8a3fbd4a0"
-    },
-    {
-      "path": "TESTING.md",
-      "bytes": 358,
-      "sha256": "20e1e4ee1c6bdbb6ae0fb8cc4cae240896e61739f4490196e91508792c1bf843"
-    },
-    {
-      "path": "THIRD-PARTY-NOTICES.md",
-      "bytes": 1139,
-      "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
     }
   ]
 }
