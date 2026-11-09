@@ -2,7 +2,7 @@
 
 ## Prepare and Run
 
-Download [Prepare-LeptonicaHello-ea016.zip](https://github.com/pisarev/crosspascal/releases/download/early-access-016/Prepare-LeptonicaHello-ea016.zip), extract it, and double-click **Prepare.cmd**. It downloads the matched dependencies and sample data, then opens the prepared project folder. Open the **.dproj** in Delphi 13.2 or the **.lpi** in Lazarus 4.8, and press **Run**. See the [complete preparation guide](https://github.com/pisarev/crosspascal/blob/early-access-016/docs/PREPARE-EXAMPLES.md) for first-time private GitHub access, model sizes and the other examples.
+Download [Prepare-LeptonicaHello-ea016.zip](https://github.com/pisarev/crosspascal/releases/download/early-access-016/Prepare-LeptonicaHello-ea016.zip), extract it, and double-click **Prepare.cmd**. It downloads the matched dependencies and sample data, then opens the prepared project folder. Open the **.dproj** in Delphi 13.2 or the **.lpi** in Lazarus 4.8, and press **Run**. See the [complete preparation guide](https://github.com/pisarev/crosspascal/blob/main/docs/PREPARE-EXAMPLES.md) for public downloads and optional GitHub request-limit recovery, model sizes and the other examples.
 
 
 Build document-image tools in Object Pascal with Leptonica. Use the bindings to create and inspect Pix images, convert pixel formats, and prepare photographs or scans for later processing. The higher-level helpers manage common Pix operations from Pascal.

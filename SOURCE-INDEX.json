@@ -322,18 +322,18 @@
     },
     {
       "path": "prepare/prepare.py",
-      "bytes": 23400,
-      "sha256": "e637e4e610a5e77428a2df2627f773c3605e0571cfe267b22ff165b970b3dda9"
+      "bytes": 23396,
+      "sha256": "af3a6e8de7602c67c3f7ce162623b42c16160b9cba2aed53659482acf8922aa7"
     },
     {
       "path": "PREPARE-EXAMPLES.md",
-      "bytes": 4248,
-      "sha256": "4c4e6eed0501cc4691ade8564eb1df78d19815dc20283fefa7533f8d497c0e8e"
+      "bytes": 4193,
+      "sha256": "3cffe79aeec8bd61bf7e0e5be71a8bc2fb832f3cf344a888f29252a99dbf177a"
     },
     {
       "path": "README.md",
-      "bytes": 1825,
-      "sha256": "bae9d1f6df2b9ed7f4664491f022d4c12528ec67f30d1c70890ec4f8866ebdc1"
+      "bytes": 1840,
+      "sha256": "422c6b8caebcd1f6ead14bb27bc2966bc1e443e624ed7d3d136506bd272c0d3f"
     },
     {
       "path": "scripts/verify_source.py",
@@ -350,5 +350,6 @@
       "bytes": 1139,
       "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
     }
-  ]
+  ],
+  "documentation_revision": "public-access-20261109"
 }
