@@ -8,8 +8,7 @@ program LeptonicaHello;
 
 uses
   {$IFDEF FPC}SysUtils{$ELSE}System.SysUtils{$ENDIF},
-  LeptonicaTypes,
-  Leptonica;
+  LeptonicaTypes, Leptonica, ExampleDefaults;
 
 procedure Require(const Condition: Boolean; const MessageText: string);
 begin
@@ -35,6 +34,7 @@ begin
       OutputPath := ExpandFileName(ParamStr(I));
       HasOutputPath := True;
     end;
+  LibraryPath := PreparedPath('leptonica', LibraryPath);
   Require(FileExists(LibraryPath), 'Leptonica DLL was not found: ' + LibraryPath);
   if not LeptInitialize(LibraryPath) then
     raise Exception.Create(Lept.Module.Error);

@@ -1,10 +1,10 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{64A2FE41-1CB8-4D67-B976-E0FA33AA2381}</ProjectGuid>
         <ProjectVersion>20.4</ProjectVersion>
         <MainSource>LeptonicaHello.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>2</TargetedPlatforms>
         <AppType>Console</AppType>
@@ -36,7 +36,7 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
         <DCC_Namespace>System;Winapi;$(DCC_Namespace)</DCC_Namespace>
-        <DCC_UnitSearchPath>..\pascal;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>../../crosspascal/prepare;..\pascal;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_ExeOutput>..\build\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>..\build\$(Platform)\$(Config)\dcu\LeptonicaHello</DCC_DcuOutput>
         <DCC_ObjOutput>..\build\$(Platform)\$(Config)\obj\LeptonicaHello</DCC_ObjOutput>
