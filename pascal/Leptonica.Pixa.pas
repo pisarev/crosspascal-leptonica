@@ -560,7 +560,7 @@ type
       PixaWriteStreamWebPAnim: TPixaWriteStreamWebPAnim;
       PixaWriteMemWebPAnim: TPixaWriteMemWebPAnim;
       PixaWriteFiles: TPixaWriteFiles;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

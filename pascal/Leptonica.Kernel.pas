@@ -80,7 +80,7 @@ type
       MakeGaussianKernel: TMakeGaussianKernel;
       MakeGaussianKernelSep: TMakeGaussianKernelSep;
       MakeDoGKernel: TMakeDoGKernel;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

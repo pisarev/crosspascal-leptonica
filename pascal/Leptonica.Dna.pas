@@ -157,7 +157,7 @@ type
       L_dnaHashDestroy: TL_dnaHashDestroy;
       L_dnaHashGetDna: TL_dnaHashGetDna;
       L_dnaHashAdd: TL_dnaHashAdd;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

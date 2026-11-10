@@ -141,7 +141,7 @@ type
       RasteropLow: TRasteropLow;
       RasteropVipLow: TRasteropVipLow;
       RasteropHipLow: TRasteropHipLow;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

@@ -247,7 +247,7 @@ type
       FpixAutoRenderContours: TFpixAutoRenderContours;
       FpixRenderContours: TFpixRenderContours;
       FpixaDisplayQuadtree: TFpixaDisplayQuadtree;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

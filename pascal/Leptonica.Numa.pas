@@ -391,7 +391,7 @@ type
       NumaConvertToPta2: TNumaConvertToPta2;
       NumaQuantizeCrossingsByWidth: TNumaQuantizeCrossingsByWidth;
       NumaQuantizeCrossingsByWindow: TNumaQuantizeCrossingsByWindow;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

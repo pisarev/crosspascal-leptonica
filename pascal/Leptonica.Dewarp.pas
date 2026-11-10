@@ -145,7 +145,7 @@ type
       DewarpaShowArrays: TDewarpaShowArrays;
       DewarpDebug: TDewarpDebug;
       DewarpShowResults: TDewarpShowResults;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

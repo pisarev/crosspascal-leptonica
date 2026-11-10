@@ -168,7 +168,7 @@ type
       RecogShowAverageTemplates: TRecogShowAverageTemplates;
       RecogShowMatchesInRange: TRecogShowMatchesInRange;
       RecogShowMatch: TRecogShowMatch;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

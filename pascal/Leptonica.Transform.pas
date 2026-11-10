@@ -334,7 +334,7 @@ type
       PixHShearLI: TPixHShearLI;
       PixVShearLI: TPixVShearLI;
       PixWarpStereoscopic: TPixWarpStereoscopic;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

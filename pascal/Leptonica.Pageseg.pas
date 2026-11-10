@@ -52,7 +52,7 @@ type
       PixSplitIntoCharacters: TPixSplitIntoCharacters;
       PixSetSelectCmap: TPixSetSelectCmap;
       PixSetSelectMaskedCmap: TPixSetSelectMaskedCmap;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

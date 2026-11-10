@@ -222,7 +222,7 @@ type
       PtaRemoveDupsByHmap: TPtaRemoveDupsByHmap;
       PtaUnionByHmap: TPtaUnionByHmap;
       PtaIntersectionByHmap: TPtaIntersectionByHmap;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

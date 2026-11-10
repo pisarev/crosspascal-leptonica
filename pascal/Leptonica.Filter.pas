@@ -117,7 +117,7 @@ type
       PixRankFilterGray: TPixRankFilterGray;
       PixMedianFilter: TPixMedianFilter;
       PixRankFilterWithScaling: TPixRankFilterWithScaling;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

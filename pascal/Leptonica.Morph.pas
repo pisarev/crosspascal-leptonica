@@ -198,7 +198,7 @@ type
       PixSeedspread: TPixSeedspread;
       PixLocalExtrema: TPixLocalExtrema;
       PixSelectedLocalExtrema: TPixSelectedLocalExtrema;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

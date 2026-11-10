@@ -106,7 +106,7 @@ type
       PixThresholdForFgBg: TPixThresholdForFgBg;
       PixThresholdToValue: TPixThresholdToValue;
       PixThreshold8: TPixThreshold8;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

@@ -33,7 +33,7 @@
     {
       "path": "examples/LeptonicaHello.dpr",
       "bytes": 2546,
-      "sha256": "f87aade5c90acad817722266aff64ba68b8f776dea1af80b1e910b92500cde1f"
+      "sha256": "19fde380ea681ae110da422a6a0c3f738d75292842a97ce593387e96c912b66b"
     },
     {
       "path": "examples/LeptonicaHello.dproj",
@@ -118,7 +118,7 @@
     {
       "path": "packages/delphi/crosspascal_crosslept.dpk",
       "bytes": 2832,
-      "sha256": "ab31232c64f894dd566e9edaaed6848f2046a71a477952a7047141699a627a1c"
+      "sha256": "a3a10aa70debb40eb3e72eaf8512e4e02b762d31d4803fe5c9c3c5a1ca8c9efa"
     },
     {
       "path": "packages/lazarus/crosspascal_crosslept.lpk",
@@ -128,22 +128,22 @@
     {
       "path": "pascal/CrossVision.Box.pas",
       "bytes": 9865,
-      "sha256": "1dfa3dba49005836fd30700daae2831e942b72fd2d873f6d1f9ab4dfca20a733"
+      "sha256": "6a4e0ce15d846fb650eaf348cad4cdea8394f92eede2d9976ac48c4f893d7b6f"
     },
     {
       "path": "pascal/CrossVision.Colormap.pas",
       "bytes": 8154,
-      "sha256": "eef6f9f77adccf15d20cb8d94b8c46b5b3fe224e0da99079b3c03687d5a0b9f7"
+      "sha256": "8f5160c32ed05103f4e8eb60696e962469564b9a6918366689d7b2714ebed31a"
     },
     {
       "path": "pascal/CrossVision.FPix.pas",
       "bytes": 8146,
-      "sha256": "80a0bca1c617856c585583f48a81a66f3332ff9c9b6cdc930f95649704ae6bf3"
+      "sha256": "c238dce9aaa1e2b4a9dc9cbfa6944b4bf5acbcc5e9448115bb8e309e209d1e17"
     },
     {
       "path": "pascal/CrossVision.Numa.pas",
       "bytes": 3995,
-      "sha256": "2c1a43692ebded6f706d3ad684d5d924f735db08137d8ec8b33be84fbb738185"
+      "sha256": "6aa69c955b1247df6935b6df86519a71991d21132f55b596131c6bc4ec130c27"
     },
     {
       "path": "pascal/CrossVision.Pix.pas",
@@ -153,32 +153,32 @@
     {
       "path": "pascal/CrossVision.Pixa.pas",
       "bytes": 3893,
-      "sha256": "8229bdec8bd8522b9b157ba3e3eeaf256072d8e500291f4278a42999c027bf4d"
+      "sha256": "545ec51f325d90c2de9e7c726c4b1f082abf49b6ae685ac2d39b44dbf866e392"
     },
     {
       "path": "pascal/CrossVision.Pta.pas",
       "bytes": 3962,
-      "sha256": "803ff193920d96a49ceb4ea2d1c5b1167c212f9433da5dd717f9a5a0dacdfbda"
+      "sha256": "2092185ee649cc36cccd28161a3595886fbb465fd81a83d3d62c9cae059a84c5"
     },
     {
       "path": "pascal/CrossVision.Sel.pas",
       "bytes": 8250,
-      "sha256": "c22d5ec2a92d2b784e7593d7bd41150fa799438dd78fed6ae7871d273e950c51"
+      "sha256": "b714cac15e391d3f49525bf5d520c6257a2e4496fb31969c4da49cca59555a48"
     },
     {
       "path": "pascal/Leptonica.Analysis.pas",
-      "bytes": 22385,
-      "sha256": "7916c90c7fedbc7c63dd5bfe412ac7f262823c3f46dcd62800b6fcafbd5ca3b9"
+      "bytes": 22383,
+      "sha256": "ea04c956882a4ad15e61725956f3de7631584d2578b1c14f396c6dbee95ae684"
     },
     {
       "path": "pascal/Leptonica.Binarize.pas",
-      "bytes": 8555,
-      "sha256": "f431cdc6ffa2c8ca876e177f2d448599474a6781d3be2a4725baec375053ea65"
+      "bytes": 8553,
+      "sha256": "687861317ded1ac16857449bb4434e331848192d566b3acef0849d6b0d996a67"
     },
     {
       "path": "pascal/Leptonica.Blend.pas",
-      "bytes": 5736,
-      "sha256": "ccc4554d7b520c6268a08397b4b0d9a03fc75d9464e94c2190a9312cbf7e56ee"
+      "bytes": 5734,
+      "sha256": "dd2d90606f934b842eacf41a319eadf9b7b2d3cce0351127ebbdb90e950c84fb"
     },
     {
       "path": "pascal/Leptonica.Box.pas",
@@ -192,33 +192,33 @@
     },
     {
       "path": "pascal/Leptonica.Colormap.pas",
-      "bytes": 14387,
-      "sha256": "3113ca6bad2ee8765fad733f28cd214f737a6a103a3c4c17fdf87526045f6337"
+      "bytes": 14385,
+      "sha256": "d945fd3cb9803b83d50b459f8b2cc081ecfa39b4c3ce6c302898d66da6d6574e"
     },
     {
       "path": "pascal/Leptonica.Dewarp.pas",
-      "bytes": 12174,
-      "sha256": "ac778d8d428ceba6c1799cddac2c8ea34fefe61d10e9befc2be5c277830f3138"
+      "bytes": 12172,
+      "sha256": "8a49551986f15938a52205c239cb7a3cb5733c25413841889a97395ca3c5824e"
     },
     {
       "path": "pascal/Leptonica.Dna.pas",
-      "bytes": 12809,
-      "sha256": "9fa3ddb017eac45d8419db26e3177438f0598dcb2dc4802317e5aa817dc0b03e"
+      "bytes": 12807,
+      "sha256": "a37261c466a41e08abf5c1e61bc17a253627086b9aa28b370ba721bafc0270e3"
     },
     {
       "path": "pascal/Leptonica.Enhance.pas",
-      "bytes": 10493,
-      "sha256": "0f871abea65daa635399bfb45a2bc84dc13426d8e5807cb81648df8a6bff5c43"
+      "bytes": 10491,
+      "sha256": "fe5b3900fcf06443eec98f43439909436579afd02e04a0838772b7d222c8d1c5"
     },
     {
       "path": "pascal/Leptonica.Filter.pas",
-      "bytes": 9323,
-      "sha256": "913e7de15fdb7ed9233468ffc0f8ffe6c3e620d97853a5b971e20497bd91651c"
+      "bytes": 9321,
+      "sha256": "17e4dfbd8055fb0a01cd6ff2bd51d8a0e7e77d477419d5875e6d23dd61b736a8"
     },
     {
       "path": "pascal/Leptonica.FPix.pas",
-      "bytes": 19656,
-      "sha256": "e949f5abc23cd692f5ae4806021819cb656a6a5781d143c5ab04e463bf797065"
+      "bytes": 19654,
+      "sha256": "7599a1862246fa89975e45d6e6acf620745e6cef374d626315cc20416845bec7"
     },
     {
       "path": "pascal/Leptonica.Graphics.pas",
@@ -227,33 +227,33 @@
     },
     {
       "path": "pascal/Leptonica.IO.pas",
-      "bytes": 30262,
-      "sha256": "9c8a57350f5a7253eb2015e1a50cbe49c7283b3822ba627b15d86c529bb921f1"
+      "bytes": 30260,
+      "sha256": "42071d1868587c0ee5399c9aee90fa32ee6188f2db1a8f0d8737627d81ad77c8"
     },
     {
       "path": "pascal/Leptonica.Jbig.pas",
-      "bytes": 6079,
-      "sha256": "dfa82a434511a1bf0f2aa7f40f69109c61b9205d355fe9a8078f20c00ede4593"
+      "bytes": 6077,
+      "sha256": "54222856aa1e6eacb55362dbec629e53f7cdb412e0dc149a616325abb3a9b492"
     },
     {
       "path": "pascal/Leptonica.Kernel.pas",
-      "bytes": 5590,
-      "sha256": "b024cb10eac396e0d1fe543233a80d51fb8109a518a05d2143b5cc492170673e"
+      "bytes": 5588,
+      "sha256": "699df2d7cf577a2d0aa0c5ff4e6b2eaa8a921c86fe16fbe2bc440d4c54a467cb"
     },
     {
       "path": "pascal/Leptonica.Morph.pas",
-      "bytes": 17033,
-      "sha256": "518520c1763a6959f17fe735b838d725dd2de1956507e607f74b80a2adc03ad0"
+      "bytes": 17031,
+      "sha256": "bd99c26448e854fcb273fdbae42ea89a0152adcb2f482a8f8867fec837dec431"
     },
     {
       "path": "pascal/Leptonica.Numa.pas",
-      "bytes": 34442,
-      "sha256": "7aac209dd2432a676b093a32467fc81d21cbdaf4a5d3ed1db547c71e737ad360"
+      "bytes": 34440,
+      "sha256": "d518a144714e4d4be63e4f09c1278814c77ef296640273643455459c4e6e9763"
     },
     {
       "path": "pascal/Leptonica.Pageseg.pas",
-      "bytes": 3107,
-      "sha256": "6e4365a389cd579fddb9547bdab66797cb9ffc70497f2d5111237d9c132e1530"
+      "bytes": 3105,
+      "sha256": "1b8c009e37d26841b954c00f9009ca6b3d12ba90f299cf8a6b0b8e4c42c43e9f"
     },
     {
       "path": "pascal/Leptonica.pas",
@@ -262,48 +262,48 @@
     },
     {
       "path": "pascal/Leptonica.Pix.pas",
-      "bytes": 182423,
-      "sha256": "67f69d3c2ea3f8c3af79bcab59202d3ba0d8bea0dac75cede953bee81ecc69d5"
+      "bytes": 182421,
+      "sha256": "6a8505ea9e5d5ea577019844140343be32492170de1a86f66e89ab220e25bff6"
     },
     {
       "path": "pascal/Leptonica.Pixa.pas",
-      "bytes": 50117,
-      "sha256": "28cdc22a1d10c3407f2ff740a25c2fadf8430c97b49cb8fdef57b8b2fa13c55c"
+      "bytes": 50115,
+      "sha256": "4813edccf0924025b5f96fb36bc4d0851237644601738267c41d5e21bfe7fbf1"
     },
     {
       "path": "pascal/Leptonica.Pta.pas",
-      "bytes": 17475,
-      "sha256": "f0d0982a90c2428e2db5ed49bafa0e32e3d7788a931bd716d0d37de194ce8bdc"
+      "bytes": 17473,
+      "sha256": "bc29e13740ff9e951c85db1fd8943b26c85341d1f92411bbd4d86e8522c8a035"
     },
     {
       "path": "pascal/Leptonica.Recog.pas",
-      "bytes": 13995,
-      "sha256": "a781a60b4ccc3447c7f3888e27b4fd6fa7dbb6237fba61aa71cc5273ab45f34c"
+      "bytes": 13993,
+      "sha256": "e441d44f32ac8c222df8500dbe1bf8e280c38d20477bc0918e9b6cf03fe804f2"
     },
     {
       "path": "pascal/Leptonica.Rop.pas",
-      "bytes": 10926,
-      "sha256": "8b06396308215a426a95f237a1582bc7445880d5e50707f95693df30688ee721"
+      "bytes": 10924,
+      "sha256": "94a1478904bf39131917523c9e2ed529e0903dc14992fded92fad7930779549c"
     },
     {
       "path": "pascal/Leptonica.Sarray.pas",
-      "bytes": 10187,
-      "sha256": "aac4091f87ba5f23d828ff528ee55377a7c15e9a959d3b4e03408641c2578246"
+      "bytes": 10185,
+      "sha256": "4a1cee6cfdd24417fca4a68533ac76c7b97735275bc8ca95ca2a72f11f9edc34"
     },
     {
       "path": "pascal/Leptonica.Sel.pas",
-      "bytes": 10009,
-      "sha256": "00b7b2bc5a41a1fd3bbae70177750d04398912979c901d0c655a64aa7ab6d4a9"
+      "bytes": 10007,
+      "sha256": "c0fc03451ef27f7947e184eddddff53983b02ae67233dc061b6795b24b7c5bcb"
     },
     {
       "path": "pascal/Leptonica.Transform.pas",
-      "bytes": 30016,
-      "sha256": "0631e4d2315b3ab181b90db5300035bdd847d0144f88e0436f0c2a7107fd5bc6"
+      "bytes": 30014,
+      "sha256": "9ffcc9ed4ce9ceaedcd057e0a8b6c80a5304cd96feec0d316ae955423b28fc85"
     },
     {
       "path": "pascal/Leptonica.Watershed.pas",
-      "bytes": 2050,
-      "sha256": "043ee5ec8feac985c51086724872f1ce3583d3731545dd5d4c2918d7ba9cdf01"
+      "bytes": 2048,
+      "sha256": "6dcb620fddd07b18e7fd5e46ca34594865bbd619a030845795539c313478400c"
     },
     {
       "path": "pascal/LeptonicaTypes.pas",
@@ -351,5 +351,6 @@
       "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
     }
   ],
-  "documentation_revision": "public-access-20261109"
+  "documentation_revision": "maintenance-20261110",
+  "source_revision": "controls-format-20261110"
 }

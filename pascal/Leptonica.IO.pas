@@ -355,7 +355,7 @@ type
       PixDisplayWithTitle: TPixDisplayWithTitle;
       ChangeFormatForMissingLib: TChangeFormatForMissingLib;
       PixDisplayWrite: TPixDisplayWrite;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

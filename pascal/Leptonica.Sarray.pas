@@ -124,7 +124,7 @@ type
       SarrayIntersectionByHmap: TSarrayIntersectionByHmap;
       SarrayGenerateIntegers: TSarrayGenerateIntegers;
       SarrayLookupCSKV: TSarrayLookupCSKV;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

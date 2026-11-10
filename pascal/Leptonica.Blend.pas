@@ -81,7 +81,7 @@ type
       PixBlendBoxaRandom: TPixBlendBoxaRandom;
       PixBlendInRect: TPixBlendInRect;
       PixAddAlphaTo1bpp: TPixAddAlphaTo1bpp;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

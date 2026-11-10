@@ -173,7 +173,7 @@ type
       PixcmapConvertHSVToRGB: TPixcmapConvertHSVToRGB;
       PixcmapConvertRGBToYUV: TPixcmapConvertRGBToYUV;
       PixcmapConvertYUVToRGB: TPixcmapConvertYUVToRGB;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

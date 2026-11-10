@@ -7,8 +7,8 @@ program LeptonicaHello;
 {$APPTYPE CONSOLE}
 
 uses
-  {$IFDEF FPC}SysUtils{$ELSE}System.SysUtils{$ENDIF},
-  LeptonicaTypes, Leptonica, ExampleDefaults;
+  {$IFDEF FPC}SysUtils{$ELSE}System.SysUtils{$ENDIF}, LeptonicaTypes, Leptonica,
+  ExampleDefaults;
 
 procedure Require(const Condition: Boolean; const MessageText: string);
 begin

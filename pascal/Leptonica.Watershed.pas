@@ -41,7 +41,7 @@ type
       WshedBasins: TWshedBasins;
       WshedRenderFill: TWshedRenderFill;
       WshedRenderColors: TWshedRenderColors;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

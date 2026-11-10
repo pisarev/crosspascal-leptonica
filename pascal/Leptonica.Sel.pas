@@ -134,7 +134,7 @@ type
       SelaAddCrossJunctions: TSelaAddCrossJunctions;
       SelaAddTJunctions: TSelaAddTJunctions;
       SelMakePlusSign: TSelMakePlusSign;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

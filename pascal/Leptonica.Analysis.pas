@@ -251,7 +251,7 @@ type
       PixFindSkewSweepAndSearchScore: TPixFindSkewSweepAndSearchScore;
       PixFindSkewSweepAndSearchScorePivot: TPixFindSkewSweepAndSearchScorePivot;
       PixFindSkewOrthogonalRange: TPixFindSkewOrthogonalRange;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

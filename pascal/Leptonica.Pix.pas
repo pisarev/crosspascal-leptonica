@@ -1997,7 +1997,7 @@ type
       PixMakeColorSquare: TPixMakeColorSquare;
       ZlibCompress: TZlibCompress;
       ZlibUncompress: TZlibUncompress;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

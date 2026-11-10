@@ -125,7 +125,7 @@ type
       PixMultConstantGray: TPixMultConstantGray;
       PixMultConstAccumulate: TPixMultConstAccumulate;
       PixModifyStrokeWidth: TPixModifyStrokeWidth;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation

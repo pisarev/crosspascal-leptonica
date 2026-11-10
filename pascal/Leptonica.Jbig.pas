@@ -84,7 +84,7 @@ type
       JbDataRender: TJbDataRender;
       JbGetULCorners: TJbGetULCorners;
       JbGetLLCorners: TJbGetLLCorners;
-      procedure Initialize(const Handle: TLibHandle);
+    procedure Initialize(const Handle: TLibHandle);
   end;
 
 implementation
