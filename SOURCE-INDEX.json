@@ -67,8 +67,8 @@
     },
     {
       "path": "examples/LeptonicaHello.dpr",
-      "bytes": 3104,
-      "sha256": "2820384bfd2172dd64c40836791a9c5477d0375c27ebd378a24a15d7aa9a11e5"
+      "bytes": 2549,
+      "sha256": "aa99be53f3b6f6a68c9f570ca43126b3e4bf2d299931eeff7560fefff304c74d"
     },
     {
       "path": "examples/LeptonicaHello.dproj",

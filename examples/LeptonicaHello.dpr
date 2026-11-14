@@ -1,12 +1,4 @@
-﻿{ ************************************************************************** }
-{                                                                            }
-{ LeptonicaHello                                                             }
-{                                                                            }
-{ Copyright © 2026 Yuriy Pisarev                                             }
-{                                                                            }
-{ ************************************************************************** }
-
-program LeptonicaHello;
+﻿program LeptonicaHello;
 
 {$IFDEF FPC}
 {$MODE DELPHIUNICODE}
