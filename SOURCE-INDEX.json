@@ -137,8 +137,8 @@
     },
     {
       "path": "packages/delphi/crosspascal_crosslept.dpk",
-      "bytes": 2832,
-      "sha256": "ab31232c64f894dd566e9edaaed6848f2046a71a477952a7047141699a627a1c"
+      "bytes": 2835,
+      "sha256": "a10c6d2d4dd1b049bd9500cff5da5d0690d1b5af0e11a7ef2fe090ed298cf124"
     },
     {
       "path": "packages/lazarus/crosspascal_crosslept.lpk",
