@@ -295,11 +295,11 @@ begin
   if (Ext = '.jpg') or (Ext = '.jpeg') then
     Fmt := 2
   else if Ext = '.bmp' then
-      Fmt := 1
-    else if (Ext = '.tif') or (Ext = '.tiff') then
-        Fmt := 4
-      else
-        Fmt := 3;
+    Fmt := 1
+  else if (Ext = '.tif') or (Ext = '.tiff') then
+    Fmt := 4
+  else
+    Fmt := 3;
   Result := Assigned(FHandle) and (Lept.IO.PixWrite(PAnsiChar(AnsiString(Path)), FHandle, Fmt) = 0);
 end;
 

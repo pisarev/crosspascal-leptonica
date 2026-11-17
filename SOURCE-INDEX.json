@@ -167,8 +167,8 @@
     },
     {
       "path": "pascal/CrossVision.Pix.pas",
-      "bytes": 10611,
-      "sha256": "b2b023104de0182761d959fb892808b779702e7458d51a88eaca2638d1a290f9"
+      "bytes": 10595,
+      "sha256": "f5931ca8bec06e93b2481338a117303e021d17b7fdbc56a601c3520d25ce566e"
     },
     {
       "path": "pascal/CrossVision.Pixa.pas",
@@ -347,5 +347,5 @@
     }
   ],
   "documentation_revision": "maintenance-20261110",
-  "source_revision": "controls-format-20261110"
+  "source_revision": "source-update-20261117"
 }
