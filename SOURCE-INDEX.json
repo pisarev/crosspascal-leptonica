@@ -1,6 +1,6 @@
 {
   "schema": "crosspascal-windows-source-index-v1",
-  "release_id": "early-access-019",
+  "release_id": "early-access-023",
   "repository": "crosspascal-leptonica",
   "local_metadata": [
     {
@@ -42,13 +42,13 @@
     },
     {
       "path": "PREPARE-EXAMPLES.md",
-      "bytes": 6494,
-      "sha256": "65775a75ac9f5f23b2ccc535fb1f398a7bef895287968bdf19cb08325672812b"
+      "bytes": 1260,
+      "sha256": "3b71505dc9c8ea2b5047876bcf3871bcd4474911bb0a43d0f4be0a490dd6ad91"
     },
     {
       "path": "README.md",
       "bytes": 1840,
-      "sha256": "f112bbd16353f23b1571b2f53125bd7ff64ea5609c4128a474e0cab2c10a3775"
+      "sha256": "5d2be365b67ad38b19bd0f1798a3c5ccabe54069f1fe6c181b2747099b6ca212"
     },
     {
       "path": "TESTING.md",
@@ -72,13 +72,13 @@
     },
     {
       "path": "examples/LeptonicaHello.dproj",
-      "bytes": 11003,
-      "sha256": "f7646809fce95b209d62c723c4765548faa344cd1f5a26a0571ce64c096dc6dc"
+      "bytes": 11297,
+      "sha256": "58b991200a6a1639b827460baba2d26492d156f7743d62d6de3abedaa22c568b"
     },
     {
       "path": "examples/LeptonicaHello.lpi",
-      "bytes": 1344,
-      "sha256": "6edd0101960e18689b0e914d2bbdb50954c889b994f08bb568bb94e3d5a05397"
+      "bytes": 1638,
+      "sha256": "67b56a9e5b8c630d4a43f4b3d809bb7fb335a424ca1fd34ee0f84b163de23635"
     },
     {
       "path": "examples/Prepare.cmd",
@@ -347,5 +347,5 @@
     }
   ],
   "documentation_revision": "maintenance-20261110",
-  "source_revision": "source-update-20261117"
+  "source_revision": "early-access-023"
 }
