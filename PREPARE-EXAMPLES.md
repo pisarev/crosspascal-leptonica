@@ -1,6 +1,6 @@
 # Prepare and run an example
 
-Download [Prepare-LeptonicaHello-ea023.zip](https://github.com/pisarev/crosspascal/releases/download/early-access-023/Prepare-LeptonicaHello-ea023.zip), extract it, and run **Prepare.cmd**.
+Download [Prepare-LeptonicaHello-CPU-ea023.zip](https://github.com/pisarev/crosspascal/releases/download/early-access-023/Prepare-LeptonicaHello-CPU-ea023.zip), extract it, and run **Prepare.cmd**.
 Prepare downloads the current Windows x64 SDK, the matching native libraries,
 and sample files. Downloads are checked with SHA-256. No Python or GitHub
 account is required.
