@@ -1,6 +1,6 @@
 {
   "schema": "crosspascal-windows-source-index-v1",
-  "release_id": "early-access-023",
+  "release_id": "early-access-024",
   "repository": "crosspascal-leptonica",
   "local_metadata": [
     {
@@ -24,41 +24,6 @@
       "path": "BUILD.md",
       "bytes": 929,
       "sha256": "e6ffd557e0cdef28cca9d16541d61f9007c6b56bc853a804d67bac6562979d8c"
-    },
-    {
-      "path": "INSTALL.md",
-      "bytes": 663,
-      "sha256": "492342338e5eec3b67a0f26a0b2be3a5f99c462292d9590ecca06806e896bba6"
-    },
-    {
-      "path": "KNOWN-ISSUES.md",
-      "bytes": 521,
-      "sha256": "af8a2be96337ee6fe1625ff153da9f3ce1c8ca06e88e8200af94593383ca6387"
-    },
-    {
-      "path": "LICENSE",
-      "bytes": 1070,
-      "sha256": "04b643fe3d2d95be3b9a0ad9d3882d00a9b2d9dfb74694f35fe8edfc77e67815"
-    },
-    {
-      "path": "PREPARE-EXAMPLES.md",
-      "bytes": 1268,
-      "sha256": "91ab3091758a9a5b47cb0535944c2f2b2f7cbefff154d4d5e3a97bcd10554fa8"
-    },
-    {
-      "path": "README.md",
-      "bytes": 1848,
-      "sha256": "b1110d247199a3d6f54c144e914b0fe9216813f3c9cacc1e9ce485d5e300d408"
-    },
-    {
-      "path": "TESTING.md",
-      "bytes": 358,
-      "sha256": "20e1e4ee1c6bdbb6ae0fb8cc4cae240896e61739f4490196e91508792c1bf843"
-    },
-    {
-      "path": "THIRD-PARTY-NOTICES.md",
-      "bytes": 1139,
-      "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
     },
     {
       "path": "docs/index.html",
@@ -89,6 +54,21 @@
       "path": "examples/README.md",
       "bytes": 636,
       "sha256": "6973865864fd8f366ceeec0356650b621ebc34e5362e5bcb631f508d5bf9cfe0"
+    },
+    {
+      "path": "INSTALL.md",
+      "bytes": 663,
+      "sha256": "492342338e5eec3b67a0f26a0b2be3a5f99c462292d9590ecca06806e896bba6"
+    },
+    {
+      "path": "KNOWN-ISSUES.md",
+      "bytes": 521,
+      "sha256": "af8a2be96337ee6fe1625ff153da9f3ce1c8ca06e88e8200af94593383ca6387"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "sha256": "04b643fe3d2d95be3b9a0ad9d3882d00a9b2d9dfb74694f35fe8edfc77e67815"
     },
     {
       "path": "licenses/third-party/giflib/COPYING",
@@ -231,14 +211,14 @@
       "sha256": "1560bf94ab790f0cca1e1fc32b9c040f8bcbe87da841b64e8fd382d51d90647a"
     },
     {
-      "path": "pascal/Leptonica.FPix.pas",
-      "bytes": 19654,
-      "sha256": "987df6c75b260ebc23cd37bdf24a1e85c603b8d362ac4df4173856e5a0e64b1b"
-    },
-    {
       "path": "pascal/Leptonica.Filter.pas",
       "bytes": 9321,
       "sha256": "a8c1de32920692fe9fc45101545a79f3d73baa10d4826163068f34121d7bfd0b"
+    },
+    {
+      "path": "pascal/Leptonica.FPix.pas",
+      "bytes": 19654,
+      "sha256": "987df6c75b260ebc23cd37bdf24a1e85c603b8d362ac4df4173856e5a0e64b1b"
     },
     {
       "path": "pascal/Leptonica.Graphics.pas",
@@ -274,6 +254,11 @@
       "path": "pascal/Leptonica.Pageseg.pas",
       "bytes": 3105,
       "sha256": "4596040d434e85b5936f303f56014a3b61ced5b1b9c793733d6316977fe293cd"
+    },
+    {
+      "path": "pascal/Leptonica.pas",
+      "bytes": 14938,
+      "sha256": "9e12f47e1934d12787f5a6c6cdb3e9b93bc4bf22cbc3df0988e59df9c3fb77d0"
     },
     {
       "path": "pascal/Leptonica.Pix.pas",
@@ -321,14 +306,14 @@
       "sha256": "66817373b185c5d67cd238f71a943e89d931884dadecd18ebb8acab62386d650"
     },
     {
-      "path": "pascal/Leptonica.pas",
-      "bytes": 14938,
-      "sha256": "9e12f47e1934d12787f5a6c6cdb3e9b93bc4bf22cbc3df0988e59df9c3fb77d0"
-    },
-    {
       "path": "pascal/LeptonicaTypes.pas",
       "bytes": 9310,
       "sha256": "ae32a0634fc4146dbd8686816d4d5f70f68f2f26822edd1b84457e6766beae2e"
+    },
+    {
+      "path": "PREPARE-EXAMPLES.md",
+      "bytes": 1249,
+      "sha256": "d94c2ecfb515f4ea0df31f740fe096c29c6b342256720e5aa1e2c5fda88349a7"
     },
     {
       "path": "prepare/bootstrap.ps1",
@@ -341,11 +326,26 @@
       "sha256": "79504cb6d4c8b5e0f729ff422ac5ce9bab5c487d97b9ae728d96d965dbdd86ab"
     },
     {
+      "path": "README.md",
+      "bytes": 1848,
+      "sha256": "9b89d8092af4a8a7f946d66ea543f5dc124904832759285d6798365579373451"
+    },
+    {
       "path": "scripts/verify_source.py",
       "bytes": 13549,
       "sha256": "e36b010d92dd4a3b209c0e9fffb8492f492278c9bb65827a7b0dcee8a3fbd4a0"
+    },
+    {
+      "path": "TESTING.md",
+      "bytes": 358,
+      "sha256": "20e1e4ee1c6bdbb6ae0fb8cc4cae240896e61739f4490196e91508792c1bf843"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "bytes": 1139,
+      "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
     }
   ],
-  "documentation_revision": "maintenance-20261110",
-  "source_revision": "early-access-023"
+  "documentation_revision": "ea024-20261125",
+  "source_revision": "early-access-024"
 }
