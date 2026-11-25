@@ -312,23 +312,23 @@
     },
     {
       "path": "prepare/bootstrap.ps1",
-      "bytes": 38442,
-      "sha256": "48dde4cd8be8a72d06cac395b5a333b43e4f4e1e6c0c0ba00a62cabb98c7cf27"
+      "bytes": 45056,
+      "sha256": "15d41f9b1445d00ab66785226245bc8b2e219a2ce2512c977e3d01ab947446e2"
     },
     {
       "path": "prepare/prepare-bootstrap.json",
-      "bytes": 83,
-      "sha256": "79504cb6d4c8b5e0f729ff422ac5ce9bab5c487d97b9ae728d96d965dbdd86ab"
+      "bytes": 139,
+      "sha256": "ee28ecfee7ba3a213d889c72af61b487c371f4bbb246a5dfa76d1edc6dee6227"
     },
     {
       "path": "PREPARE-EXAMPLES.md",
-      "bytes": 1255,
-      "sha256": "8164d8937a525a5019850fb56f192c41c314f898347600b90229df52fcfc0f25"
+      "bytes": 1261,
+      "sha256": "5564c5783d4f464119a7d83918fd925ee1fcb92cc63fcc40d51d86eff4f3bfc2"
     },
     {
       "path": "README.md",
-      "bytes": 1854,
-      "sha256": "491e948b888c9c9298b2c7f0647f8a983d7bf2fc266540683b55876da12880e5"
+      "bytes": 1857,
+      "sha256": "cf77f4586d031dc20b0b4d205156fc5fe873254cf566b097fef107ef879aae4c"
     },
     {
       "path": "scripts/verify_source.py",
