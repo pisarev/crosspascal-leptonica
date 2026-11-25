@@ -1,6 +1,6 @@
 {
   "schema": "crosspascal-windows-source-index-v1",
-  "release_id": "early-access-024",
+  "release_id": "early-access-024-r1",
   "repository": "crosspascal-leptonica",
   "local_metadata": [
     {
@@ -311,11 +311,6 @@
       "sha256": "ae32a0634fc4146dbd8686816d4d5f70f68f2f26822edd1b84457e6766beae2e"
     },
     {
-      "path": "PREPARE-EXAMPLES.md",
-      "bytes": 1249,
-      "sha256": "d94c2ecfb515f4ea0df31f740fe096c29c6b342256720e5aa1e2c5fda88349a7"
-    },
-    {
       "path": "prepare/bootstrap.ps1",
       "bytes": 38442,
       "sha256": "48dde4cd8be8a72d06cac395b5a333b43e4f4e1e6c0c0ba00a62cabb98c7cf27"
@@ -326,9 +321,14 @@
       "sha256": "79504cb6d4c8b5e0f729ff422ac5ce9bab5c487d97b9ae728d96d965dbdd86ab"
     },
     {
+      "path": "PREPARE-EXAMPLES.md",
+      "bytes": 1255,
+      "sha256": "8164d8937a525a5019850fb56f192c41c314f898347600b90229df52fcfc0f25"
+    },
+    {
       "path": "README.md",
-      "bytes": 1848,
-      "sha256": "9b89d8092af4a8a7f946d66ea543f5dc124904832759285d6798365579373451"
+      "bytes": 1854,
+      "sha256": "491e948b888c9c9298b2c7f0647f8a983d7bf2fc266540683b55876da12880e5"
     },
     {
       "path": "scripts/verify_source.py",
@@ -346,6 +346,6 @@
       "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
     }
   ],
-  "documentation_revision": "ea024-20261125",
-  "source_revision": "early-access-024"
+  "documentation_revision": "ea024-r1-20261125",
+  "source_revision": "early-access-024-r1"
 }
