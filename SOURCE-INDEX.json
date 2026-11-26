@@ -1,6 +1,6 @@
 {
   "schema": "crosspascal-windows-source-index-v1",
-  "release_id": "early-access-024-r1",
+  "release_id": "early-access-025",
   "repository": "crosspascal-leptonica",
   "local_metadata": [
     {
@@ -311,24 +311,24 @@
       "sha256": "ae32a0634fc4146dbd8686816d4d5f70f68f2f26822edd1b84457e6766beae2e"
     },
     {
+      "path": "PREPARE-EXAMPLES.md",
+      "bytes": 1252,
+      "sha256": "a1a15cc0df3591eb7b9e45e810d0d5f909f064ec70b803bb3cb38425ec2d59f5"
+    },
+    {
       "path": "prepare/bootstrap.ps1",
-      "bytes": 45056,
-      "sha256": "15d41f9b1445d00ab66785226245bc8b2e219a2ce2512c977e3d01ab947446e2"
+      "bytes": 46281,
+      "sha256": "d16e61dd0404b0eab8ebc51e400ac3c5d3305d2e7d0e4606544ccc03b939175a"
     },
     {
       "path": "prepare/prepare-bootstrap.json",
-      "bytes": 139,
-      "sha256": "ee28ecfee7ba3a213d889c72af61b487c371f4bbb246a5dfa76d1edc6dee6227"
-    },
-    {
-      "path": "PREPARE-EXAMPLES.md",
-      "bytes": 1261,
-      "sha256": "5564c5783d4f464119a7d83918fd925ee1fcb92cc63fcc40d51d86eff4f3bfc2"
+      "bytes": 130,
+      "sha256": "820640bf19258b64c6dbf2cf9c3fa7aac554920ba653a3917dcee811c56f2c01"
     },
     {
       "path": "README.md",
-      "bytes": 1857,
-      "sha256": "cf77f4586d031dc20b0b4d205156fc5fe873254cf566b097fef107ef879aae4c"
+      "bytes": 1848,
+      "sha256": "f85fe1b33ab4bc4948bf2c2f7ebc5bcb102215d363b3e5d983e8f661dc5b0a82"
     },
     {
       "path": "scripts/verify_source.py",
@@ -346,6 +346,6 @@
       "sha256": "36ee143e61b0c5aff15ba83cb64859355bf96d7f5bdfb3a16c1e1097dcbe6c1d"
     }
   ],
-  "documentation_revision": "ea024-r1-20261125",
-  "source_revision": "early-access-024-r1"
+  "documentation_revision": "ea025-20261126",
+  "source_revision": "early-access-025"
 }
